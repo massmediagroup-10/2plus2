@@ -1,0 +1,117 @@
+.catalog {
+    &-head {
+        margin-bottom: rem-calc(15px);
+        select {
+            width: 150px;
+        }
+        p {
+            color: $lighter-gray;
+            font-size: 14px;
+            margin: 0 5px;
+        }
+        p, select {
+            @extend %inline-middle;
+            margin-bottom: 0;
+        }
+    }
+    &-main {
+        padding-left: rem-calc(7.5px);
+        padding-right: rem-calc(7.5px);
+        margin-bottom: rem-calc(25px);
+    }
+    &-footer {
+        text-align: center;
+        margin-bottom: rem-calc(45px);
+        .button {
+            margin-bottom: rem-calc(24px);
+        }
+    }
+    &-item {
+        text-align: center;
+        margin-bottom: 15px;
+        float: left;
+        padding: 0 rem-calc(7.5px);
+        &-img {
+            position: relative;
+            a:before {
+                content: '';
+                @extend %full;
+                opacity: 0;
+                transition: 300ms all ease-out;
+                background: #000;
+            }
+            &:hover {
+                a:before {
+                    opacity: 0.5;
+                }
+                .catalog-item-detail {
+                    opacity: 1;
+                    transform: translateY(0px);
+                }
+            }
+        }
+        &-detail {
+            font-size: 14px;
+            font-weight: bold;
+            color: #fff;
+            @extend %full;
+            transform: translateY(70px);
+            margin: auto;
+            width: 130px;
+            height: 40px;
+            opacity: 0;
+            transition: 300ms all ease-out;
+            span {
+                text-transform: uppercase;
+            }
+            i {
+                margin-right: 17px;
+            }
+        }
+        &-body {
+            background: #fff;
+            padding-top: rem-calc(16px);
+            padding-bottom: rem-calc(16px);
+            p {
+                color: $secondary-color;
+                margin-bottom: 0.9em;
+            }
+            h6 {
+                margin-bottom: 0.3em;
+            }
+            a {
+                color: inherit;
+            }
+        }
+        &-price {
+            h5, s {
+                @extend %inline-middle;
+                margin-bottom: 0;
+            }
+            s {
+                color: $lighter-gray;
+                position: relative;
+                left: 8px;
+            }
+        }
+        &-label {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 35px;
+            line-height: 35px;
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            &.warning {
+                background: $warning-color;
+                color: #fff;
+            }
+            &.usual {
+                background: $usual-color;
+                color: #fff;
+            }
+        }
+    }
+}

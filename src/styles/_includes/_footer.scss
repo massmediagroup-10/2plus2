@@ -1,0 +1,60 @@
+.footer {
+    &-column {
+        margin-bottom: 27px;
+        p {
+            line-height: 2.2em;
+            margin-bottom: 7px;
+        }
+    }
+    &-main {
+        background: $success-color;
+        color: #fff;
+        padding-top: rem-calc(47px);
+        padding-bottom: rem-calc(30px);
+        a {
+            color: $white;
+        }
+        h6 {
+            margin-bottom: 24px;
+        }
+        ul {
+            li {
+                margin-bottom: 9px;
+                a {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+    &-icons {
+        font-size: 36px;
+        a {
+            @extend %inline-middle;
+            margin-right: 25px;
+            @extend %last;
+        }
+    }
+    &-field {
+        margin-bottom: rem-calc(20px);
+        input[type="text"] {
+            width: 185px;
+            float: left;
+            margin-right: 10px;
+            margin-bottom: 0;
+        }
+    }
+    &-copyright {
+        padding-top: rem-calc(16px);
+        a {
+            text-decoration: underline;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+    &-logo {
+        margin: rem-calc(50px);
+    }
+}

@@ -1,0 +1,18 @@
+mixin catalog-item(image,title,desc,oldPrice,labelClass,labelText)
+    .catalog-item.large-4.medium-6
+        .catalog-item-inner
+            .catalog-item-img
+                a(href="#")
+                    img(src=image)
+                    .catalog-item-detail
+                        i.fa.fa-mail-forward
+                        span Подробнее
+                    .catalog-item-label(class=labelClass)=labelText
+            .catalog-item-body
+                h6
+                    a=title
+                p
+                    a=desc
+                .catalog-item-price
+                    h5 650 грн.
+                    s=oldPrice

@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>a.nuzhin | 2plus2</title>
+    <meta charset="utf-8">
+    <meta name="author" content="a.nuzhin">
+    <meta name="description" content="layout for 2plus2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="./assets/">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/slick.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-contacts large-5 column"><a class="menu-toggle"><i class="icon icon-bars"></i></a>
+        <p>+38 (044) 279-62-26, Киев, ул. Лютеранская, 11 А</p>
+      </div>
+      <div class="header-logo large-2 column text-center"><a href="/"><img src="files/img/logo.png" alt=""></a></div>
+      <div class="header-menu large-5 column">
+        <ul>
+          <li>
+            <div class="header-search"><i class="fa fa-search"></i>
+              <input placeholder="Поиск">
+            </div>
+          </li>
+          <li><a class="underline" data-toggle="account"><span>Личный кабинет</span></a>
+            <ul class="dropdown-pane dropdown-menu" id="account" data-dropdown>
+              <li><a href="#">войти</a></li>
+              <li><a href="#">Мои данные</a></li>
+              <li><a href="#">сменить пароль</a></li>
+              <li><a href="#">Заказы</a></li>
+            </ul>
+          </li>
+          <li><a class="basket-label" data-toggle="drop-basket" data-options="align:right"><i class="icon icon-bag"></i><span>12</span></a>
+            <div class="dropdown-pane dropdown-basket" id="drop-basket" data-dropdown>
+              <p>
+                в корзине 12 товаров <br>
+                на сумму 1 115 грн.
+              </p><a class="button block">оформить заказ</a><a class="button white block"><span>перейти в корзину</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <nav class="navigation"><a class="navigation-close"><i class="icon icon-close"></i></a>
+      <h6>МЕНЮ</h6>
+      <ul>
+        <li><a>Школьная форма</a></li>
+        <li><a>Пиджаки и куртки</a></li>
+        <li><a>Брюки и шорты</a></li>
+        <li><a>Свитера</a></li>
+        <li><a>Рубашки</a></li>
+        <li><a>Футболки и майки</a></li>
+        <li><a>Платья и юбки</a></li>
+        <li><a>Статьи</a></li>
+        <li><a>Доставка</a></li>
+        <li><a>Оплата</a></li>
+        <li><a>Контакти</a></li>
+      </ul>
+      <p>+38 (044) 279 62 26</p>
+      <div class="navigation-icons"><a><i class="fa fa-facebook"></i></a><a><i class="fa fa-instagram"></i></a><a><i class="fa fa-vk"></i></a></div>
+    </nav>
+    <div class="page-heading">
+      <div class="row column">
+        <div class="breadcrumbs">
+          <ul>
+            <li><a>Главная</a></li>
+            <li><span>Каталог</span></li>
+          </ul>
+        </div>
+        <div class="page-title">Каталог</div>
+      </div>
+    </div>
+    <main class="content">
+      <div class="row column">
+        <aside class="sidebar">
+          <div class="filter" id="filter">
+            <div class="filter-heading"><a>Сбросить все</a>
+              <h5>фильтра</h5>
+            </div>
+            <div class="filter-inner">
+              <div class="filter-item">
+                <h5>категории</h5>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox1" type="checkbox">
+                  <label class="checkbox" for="checkbox1"><span class="box"><i class="fa fa-check"></i></span>Пиджаки и куртки</label>
+                </div>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox2" type="checkbox">
+                  <label class="checkbox" for="checkbox2"><span class="box"><i class="fa fa-check"></i></span>Брюки и шорты</label>
+                </div>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox3" type="checkbox">
+                  <label class="checkbox" for="checkbox3"><span class="box"><i class="fa fa-check"></i></span>Свитера</label>
+                </div>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox4" type="checkbox">
+                  <label class="checkbox" for="checkbox4"><span class="box"><i class="fa fa-check"></i></span>Рубашки</label>
+                </div>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox5" type="checkbox">
+                  <label class="checkbox" for="checkbox5"><span class="box"><i class="fa fa-check"></i></span>Футболки и майки</label>
+                </div>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox6" type="checkbox">
+                  <label class="checkbox" for="checkbox6"><span class="box"><i class="fa fa-check"></i></span>Платья и юбки</label>
+                </div>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox7" type="checkbox">
+                  <label class="checkbox" for="checkbox7"><span class="box"><i class="fa fa-check"></i></span>Школьная форма</label>
+                </div>
+                <h5>пол</h5>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox8" type="checkbox">
+                  <label class="checkbox" for="checkbox8"><span class="box"><i class="fa fa-check"></i></span>Детский</label>
+                </div>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox9" type="checkbox">
+                  <label class="checkbox" for="checkbox9"><span class="box"><i class="fa fa-check"></i></span>Взрослый</label>
+                </div>
+                <h5>цвет</h5>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox10" type="checkbox">
+                  <label class="checkbox" for="checkbox10"><span class="box" style="background-color: #000;"><i class="fa fa-check" style="color: #fff;"></i></span>Черный</label>
+                </div>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox11" type="checkbox">
+                  <label class="checkbox" for="checkbox11"><span class="box" style="background-color: #2758b3;"><i class="fa fa-check" style="color: #fff;"></i></span>Синий</label>
+                </div>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox12" type="checkbox">
+                  <label class="checkbox" for="checkbox12"><span class="box" style="background-color: #ааа;"><i class="fa fa-check"></i></span>Белый</label>
+                </div>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox13" type="checkbox">
+                  <label class="checkbox" for="checkbox13"><span class="box" style="background-color: #4ddaef;"><i class="fa fa-check"></i></span>Синий электрик</label>
+                </div>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox14" type="checkbox">
+                  <label class="checkbox" for="checkbox14"><span class="box" style="background-color: #739eee;"><i class="fa fa-check"></i></span>Голубой</label>
+                </div>
+                <div class="filter-field checkbox-group">
+                  <input id="checkbox15" type="checkbox">
+                  <label class="checkbox" for="checkbox15"><span class="box" style="background-color: #999999;"><i class="fa fa-check" style="color: #fff;"></i></span>Серый</label>
+                </div>
+                <h5>Размер</h5>
+                <div class="row">
+                  <div class="small-6 column">
+                    <div class="filter-field checkbox-group">
+                      <input id="checkbox16" type="checkbox">
+                      <label class="checkbox" for="checkbox16"><span class="box"><i class="fa fa-check"></i></span>116</label>
+                    </div>
+                    <div class="filter-field checkbox-group">
+                      <input id="checkbox17" type="checkbox">
+                      <label class="checkbox" for="checkbox17"><span class="box"><i class="fa fa-check"></i></span>128</label>
+                    </div>
+                    <div class="filter-field checkbox-group">
+                      <input id="checkbox18" type="checkbox">
+                      <label class="checkbox" for="checkbox18"><span class="box"><i class="fa fa-check"></i></span>134</label>
+                    </div>
+                    <div class="filter-field checkbox-group">
+                      <input id="checkbox19" type="checkbox">
+                      <label class="checkbox" for="checkbox19"><span class="box"><i class="fa fa-check"></i></span>140</label>
+                    </div>
+                  </div>
+                  <div class="small-6 column">
+                    <div class="filter-field checkbox-group">
+                      <input id="checkbox20" type="checkbox">
+                      <label class="checkbox" for="checkbox20"><span class="box"><i class="fa fa-check"></i></span>152</label>
+                    </div>
+                    <div class="filter-field checkbox-group">
+                      <input id="checkbox21" type="checkbox">
+                      <label class="checkbox" for="checkbox21"><span class="box"><i class="fa fa-check"></i></span>158</label>
+                    </div>
+                    <div class="filter-field checkbox-group">
+                      <input id="checkbox22" type="checkbox">
+                      <label class="checkbox" for="checkbox22"><span class="box"><i class="fa fa-check"></i></span>164</label>
+                    </div>
+                    <div class="filter-field checkbox-group">
+                      <input id="checkbox23" type="checkbox">
+                      <label class="checkbox" for="checkbox23"><span class="box"><i class="fa fa-check"></i></span>170</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </aside>
+        <section class="catalog">
+          <div class="catalog-head">
+            <div class="float-right">
+              <p>Показано 9 из 25 товаров</p>
+            </div>
+            <p>Сортировать</p>
+            <select>
+              <option>Новинки</option>
+            </select>
+          </div>
+          <div class="catalog-main row">
+                        <div class="catalog-item large-4 medium-6">
+                          <div class="catalog-item-inner">
+                            <div class="catalog-item-img"><a href="#"><img src="files/img/catalog-1.png">
+                                <div class="catalog-item-detail"><i class="fa fa-mail-forward"></i><span>Подробнее</span></div>
+                                <div class="catalog-item-label usual">распродажа</div></a></div>
+                            <div class="catalog-item-body">
+                              <h6><a>Кардиган трикотажный</a></h6>
+                              <p><a>Синий на пуговицах</a></p>
+                              <div class="catalog-item-price">
+                                <h5>650 грн.</h5>
+                                <s>750 грн.</s>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="catalog-item large-4 medium-6">
+                          <div class="catalog-item-inner">
+                            <div class="catalog-item-img"><a href="#"><img src="files/img/catalog-1.png">
+                                <div class="catalog-item-detail"><i class="fa fa-mail-forward"></i><span>Подробнее</span></div>
+                                <div class="catalog-item-label"></div></a></div>
+                            <div class="catalog-item-body">
+                              <h6><a>Бомбер</a></h6>
+                              <p><a>На мальчика</a></p>
+                              <div class="catalog-item-price">
+                                <h5>650 грн.</h5>
+                                <s></s>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="catalog-item large-4 medium-6">
+                          <div class="catalog-item-inner">
+                            <div class="catalog-item-img"><a href="#"><img src="files/img/catalog-1.png">
+                                <div class="catalog-item-detail"><i class="fa fa-mail-forward"></i><span>Подробнее</span></div>
+                                <div class="catalog-item-label warning">Новинка</div></a></div>
+                            <div class="catalog-item-body">
+                              <h6><a>Кардиган трикотажный</a></h6>
+                              <p><a>Синий на пуговицах</a></p>
+                              <div class="catalog-item-price">
+                                <h5>650 грн.</h5>
+                                <s>750 грн.</s>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="catalog-item large-4 medium-6">
+                          <div class="catalog-item-inner">
+                            <div class="catalog-item-img"><a href="#"><img src="files/img/catalog-1.png">
+                                <div class="catalog-item-detail"><i class="fa fa-mail-forward"></i><span>Подробнее</span></div>
+                                <div class="catalog-item-label"></div></a></div>
+                            <div class="catalog-item-body">
+                              <h6><a>Кардиган трикотажный</a></h6>
+                              <p><a>Синий на пуговицах</a></p>
+                              <div class="catalog-item-price">
+                                <h5>650 грн.</h5>
+                                <s>750 грн.</s>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="catalog-item large-4 medium-6">
+                          <div class="catalog-item-inner">
+                            <div class="catalog-item-img"><a href="#"><img src="files/img/catalog-1.png">
+                                <div class="catalog-item-detail"><i class="fa fa-mail-forward"></i><span>Подробнее</span></div>
+                                <div class="catalog-item-label"></div></a></div>
+                            <div class="catalog-item-body">
+                              <h6><a>Бомбер</a></h6>
+                              <p><a>На мальчика</a></p>
+                              <div class="catalog-item-price">
+                                <h5>650 грн.</h5>
+                                <s></s>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="catalog-item large-4 medium-6">
+                          <div class="catalog-item-inner">
+                            <div class="catalog-item-img"><a href="#"><img src="files/img/catalog-1.png">
+                                <div class="catalog-item-detail"><i class="fa fa-mail-forward"></i><span>Подробнее</span></div>
+                                <div class="catalog-item-label"></div></a></div>
+                            <div class="catalog-item-body">
+                              <h6><a>Платье</a></h6>
+                              <p><a>Со съемным воротником</a></p>
+                              <div class="catalog-item-price">
+                                <h5>650 грн.</h5>
+                                <s></s>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="catalog-item large-4 medium-6">
+                          <div class="catalog-item-inner">
+                            <div class="catalog-item-img"><a href="#"><img src="files/img/catalog-1.png">
+                                <div class="catalog-item-detail"><i class="fa fa-mail-forward"></i><span>Подробнее</span></div>
+                                <div class="catalog-item-label"></div></a></div>
+                            <div class="catalog-item-body">
+                              <h6><a>Кардиган трикотажный</a></h6>
+                              <p><a>Синий на пуговицах</a></p>
+                              <div class="catalog-item-price">
+                                <h5>650 грн.</h5>
+                                <s>750 грн.</s>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="catalog-item large-4 medium-6">
+                          <div class="catalog-item-inner">
+                            <div class="catalog-item-img"><a href="#"><img src="files/img/catalog-1.png">
+                                <div class="catalog-item-detail"><i class="fa fa-mail-forward"></i><span>Подробнее</span></div>
+                                <div class="catalog-item-label"></div></a></div>
+                            <div class="catalog-item-body">
+                              <h6><a>Бомбер</a></h6>
+                              <p><a>На мальчика</a></p>
+                              <div class="catalog-item-price">
+                                <h5>650 грн.</h5>
+                                <s></s>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="catalog-item large-4 medium-6">
+                          <div class="catalog-item-inner">
+                            <div class="catalog-item-img"><a href="#"><img src="files/img/catalog-1.png">
+                                <div class="catalog-item-detail"><i class="fa fa-mail-forward"></i><span>Подробнее</span></div>
+                                <div class="catalog-item-label"></div></a></div>
+                            <div class="catalog-item-body">
+                              <h6><a>Платье</a></h6>
+                              <p><a>Со съемным воротником</a></p>
+                              <div class="catalog-item-price">
+                                <h5>650 грн.</h5>
+                                <s></s>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+          </div>
+          <div class="catalog-footer"><a class="button">Показать еще</a>
+            <div class="pagination-centered">
+              <ul class="pagination text-center" role="menubar" aria-label="Pagination">
+                <li><span class="arrow unavailable" href="" aria-disabled="true"><i class="fa fa-chevron-left"></i>Назад</span></li>
+                <li><span class="current">1</span></li>
+                <li><a href="">2</a></li>
+                <li><a href="">3</a></li>
+                <li><a href="">4</a></li>
+                <li><a class="arrow" href="">Далее<i class="fa fa-chevron-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </div><a></a>
+    </main>
+    <div class="footer_placeholder"></div>
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="row">
+          <div class="large-6 column">
+            <div class="row">
+              <div class="footer-column medium-4 column">
+                <h6>Каталог</h6>
+                <ul>
+                  <li><a>Школьная форма</a></li>
+                  <li><a>Пиджаки и куртки</a></li>
+                  <li><a>Брюки и шорты</a></li>
+                  <li><a>Свитера</a></li>
+                  <li><a>Рубашки</a></li>
+                  <li><a>Футболки и майки</a></li>
+                  <li><a>Платья и юбки</a></li>
+                </ul>
+              </div>
+              <div class="footer-column medium-4 column">
+                <h6>Информация</h6>
+                <ul>
+                  <li><a>Статьи</a></li>
+                  <li><a>Контакты</a></li>
+                  <li><a>О нас</a></li>
+                </ul>
+              </div>
+              <div class="footer-column medium-4 column">
+                <h6>Контакты</h6>
+                <p>
+                  +38 (044) 279-62-26
+                  info@2x2.tm
+                  Киев, ул. Лютеранская, 11А
+                </p>
+                <div class="footer-icons"><a><i class="fa fa-facebook"></i></a><a><i class="fa fa-instagram"></i></a><a><i class="fa fa-vk"></i></a></div>
+              </div>
+            </div>
+            <div class="footer-form row column">
+              <h6>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</h6>
+              <div class="footer-field form">
+                <input type="text" placeholder="Введите Ваш номер ">
+                <input class="button" type="submit" value="Заказать">
+              </div>
+            </div>
+          </div>
+          <div class="large-6 column">
+            <div class="footer-socials"><img src="files/img/social_temp.png"></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright row">
+        <div class="large-6 column">
+          <p>Все права защищены © 2 x 2, 2015 - 2016</p>
+        </div>
+        <div class="large-6 column">
+          <p class="text-right"><a>MassMedia Group</a>- Создание и поддержка сайта</p>
+        </div>
+        <div class="footer-logo column text-center"><a><img src="files/img/logo-big.png"></a></div>
+      </div>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/slick.min.js"></script>
+    </footer>
+  </body>
+</html>

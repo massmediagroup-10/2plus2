@@ -1,0 +1,14 @@
+doctype html
+html
+    include _includes/_head.pug
+    body
+        include _includes/_header.pug
+        main.content
+            include _includes/_preview.pug
+            .product-list.row
+                include _includes/_product_item.pug
+                +product-item('files/img/product-3.png','Девочкам +')
+                +product-item('files/img/product-3.png','Мальчикам +')
+                +product-item('files/img/product-3.png','Взрослым +')
+
+        include _includes/_footer.pug

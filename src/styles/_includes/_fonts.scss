@@ -1,0 +1,14 @@
+@mixin font($fontName, $fontFamily, $fw:normal, $fs:normal) {
+    @font-face {
+        font-family: '#{$fontFamily}';
+        src: url('../fonts/#{$fontName}.eot');
+        src: local('O'),
+        url('../fonts/#{$fontName}.woff') format('woff'),
+        url('../fonts/#{$fontName}.ttf') format('truetype'),
+        url('../fonts/#{$fontName}.svg') format('svg');
+        font-weight: $fw;
+        font-style: $fs;
+    }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,900');

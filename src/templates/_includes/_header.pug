@@ -1,0 +1,75 @@
+header.header
+    .header-contacts.large-5.column
+        a.menu-toggle
+            i.icon.icon-bars
+        p +38 (044) 279-62-26, Киев, ул. Лютеранская, 11 А
+    .header-logo.large-2.column.text-center
+        a(href='/')
+            img(src='files/img/logo.png', alt='')
+    .header-menu.large-5.column
+        ul
+            li
+                .header-search
+                    i.fa.fa-search
+                    input(placeholder='Поиск')
+            li
+                a.underline(data-toggle="account")
+                    span Личный кабинет
+                ul#account.dropdown-pane.dropdown-menu(data-dropdown)
+                    li
+                        a(href='#') войти
+                    li
+                        a(href='#') Мои данные
+                    li
+                        a(href='#') сменить пароль
+                    li
+                        a(href='#') Заказы
+
+            li
+                a.basket-label(data-toggle="drop-basket",data-options="align:right")
+                    i.icon.icon-bag
+                    span 12
+                div#drop-basket.dropdown-pane.dropdown-basket(data-dropdown)
+                    p
+                        | в корзине 12 товаров <br>
+                        | на сумму 1 115 грн.
+                    a.button.block
+                        | оформить заказ
+                    a.button.white.block
+                        span перейти в корзину
+
+nav.navigation
+    a.navigation-close
+        i.icon.icon-close
+    h6 МЕНЮ
+    ul
+        li
+            a Школьная форма
+        li
+            a Пиджаки и куртки
+        li
+            a Брюки и шорты
+        li
+            a Свитера
+        li
+            a Рубашки
+        li
+            a Футболки и майки
+        li
+            a Платья и юбки
+        li
+            a Статьи
+        li
+            a Доставка
+        li
+            a Оплата
+        li
+            a Контакти
+    p +38 (044) 279 62 26
+    .navigation-icons
+        a
+            i.fa.fa-facebook
+        a
+            i.fa.fa-instagram
+        a
+            i.fa.fa-vk

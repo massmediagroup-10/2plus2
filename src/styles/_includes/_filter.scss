@@ -1,0 +1,35 @@
+.filter {
+    background: #fff;
+    margin-bottom: rem-calc(30px);
+    &-heading {
+        background: #d9d9d9;
+        padding: 0 20px;
+        line-height: 60px;
+        a {
+            font-size: 14px;
+            color: $secondary-color;
+            float: right;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+        h5 {
+           @extend %inline-middle;
+            margin-bottom: 0;
+        }
+    }
+    &-inner {
+        padding: 0px 20px 30px;
+        h5 {
+            color: $active-color;
+            margin-top: rem-calc(36px);
+            margin-bottom: rem-calc(18px);
+            &:first-child {
+                margin-top: rem-calc(30px);
+            }
+        }
+    }
+    &-field {
+        margin-bottom: 12px;
+    }
+}

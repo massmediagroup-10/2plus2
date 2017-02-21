@@ -1,0 +1,149 @@
+[type='checkbox'] + label, [type='radio'] + label {
+    margin: 0;
+}
+
+.radio-group input,
+.checkbox-group input {
+    display: none;
+}
+
+.checkbox-group input:checked + label,
+.checkbox-group input:checked + label:active,
+.radio-group input:checked + label,
+.radio-group input:checked + label:active {
+    .box {
+        .fa {
+            display: block;
+        }
+    }
+}
+
+.checkbox {
+    .box {
+        @extend %inline-middle;
+        font-size: 12px;
+        border-width: 1px;
+        border-color: #dddddd;
+        border-style: solid;
+        background-color: #fff;
+        width: 25px;
+        height: 25px;
+        margin-right: 13px;
+        text-align: center;
+        position: relative;
+        top: -1px;
+        .fa {
+            display: none;
+            color: #595959;
+            top: 5px;
+            position: relative;
+        }
+    }
+    a {
+        color: #bf9e8f;
+        text-decoration: underline !important;
+        padding: 0 4px;
+        &:hover {
+            text-decoration: none !important;
+        }
+    }
+}
+
+.radio {
+    .box {
+        @extend %inline-middle;
+        font-size: 10px;
+        border-width: 1px;
+        border-color: rgb(203, 203, 203);
+        border-style: solid;
+        background-color: rgb(240, 240, 240);
+        width: 15px;
+        height: 15px;
+        margin-right: 9px;
+        text-align: center;
+        position: relative;
+        border-radius: 50%;
+        align-items: center;
+        .fa {
+            display: none;
+            background: #2b2c2b;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+        }
+    }
+    &-group {
+        label {
+            font-size: 12px;
+            line-height: 35px;
+            letter-spacing: 0.3px;
+        }
+    }
+}
+
+select {
+    height: 35px;
+    line-height: 19px;
+    padding-left: 14px;
+}
+
+.form {
+    [type='text'],
+    [type='password'],
+    [type='date'],
+    [type='datetime'],
+    [type='datetime-local'],
+    [type='email'],
+    [type='number'],
+    [type='search'],
+    [type='tel'],
+    select,
+    textarea {
+
+        font-weight: normal;
+        font-size: rem-calc(14px);
+        padding-left: 12px;
+        border: 0;
+        &:not(textarea) {
+            height: 40px;
+        }
+        &:not(:focus) {
+            box-shadow: none;
+        }
+        &:focus {
+            box-shadow: 0 0 0px 1px #00b7f4 !important;
+        }
+        &.error {
+            box-shadow: 0 0 0px 1px #f24841 !important;
+        }
+        &::-webkit-input-placeholder {
+            color: $lighter-gray;
+        }
+    }
+    textarea {
+        height: 70px;
+        resize: none;
+        margin-bottom: 30px;
+    }
+    &-label {
+        font-size: 12px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    label {
+        font-size: 12px;
+        font-weight: bold;
+        &.error {
+            display: none !important;
+        }
+    }
+    .button {
+        font-weight: bold;
+    }
+}

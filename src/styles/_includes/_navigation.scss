@@ -1,0 +1,76 @@
+.navigation {
+    background-color: rgb(0, 0, 0);
+    width: 341px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding-left: rem-calc(60px);
+    padding-top: rem-calc(40px);
+    transform: translateX(-100%);
+    transition: 300ms transform ease;
+    z-index: 12;
+    &.active {
+        transform: translateX(0);
+
+        .navigation-close {
+            display: block;
+        }
+    }
+
+    h6 {
+        color: $lighter-gray;
+        font-size: 1rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        margin-bottom: rem-calc(40px);
+    }
+    ul {
+        margin-bottom: 22px;
+        max-height: 80%;
+        overflow: auto;
+        li {
+            margin-bottom: 18px;
+            a {
+                display: block;
+                font-weight: 900;
+                color: $white;
+                @extend h4;
+                &:hover {
+                    opacity: 0.8;
+                }
+            }
+        }
+    }
+    p {
+        color: $white;
+        font-size: rem-calc(14px);
+        @extend %inline-middle;
+        margin-right: 22px;
+    }
+    &-close {
+        position: absolute;
+        left: 100%;
+        top: 34px;
+        margin-left: 20px;
+        display: none;
+        animation-name: rotation;
+        animation-duration: 0.6s;
+        &.animate {
+            animation-name: rotation-rev;
+            animation-duration: 0.3s;
+        }
+    }
+    &-icons {
+        font-size: 26px;
+        @extend %inline-middle;
+        i {
+            color: $white;
+        }
+        a {
+            margin: 0 6px;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

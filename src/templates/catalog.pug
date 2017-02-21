@@ -1,0 +1,42 @@
+doctype html
+html
+    include _includes/_head.pug
+    body
+        include _includes/_header.pug
+        .page-heading
+            .row.column
+                .breadcrumbs
+                    ul
+                        li
+                            a Главная
+                        li
+                            span Каталог
+                .page-title Каталог
+        main.content
+            .row.column
+                aside.sidebar
+                    include _includes/_filter.pug
+                section.catalog
+                    .catalog-head
+                        .float-right
+                            p Показано 9 из 25 товаров
+
+                        p Сортировать
+                        select
+                            option Новинки
+                    .catalog-main.row
+                        include _includes/_catalog_item.pug
+                        +catalog-item('files/img/catalog-1.png','Кардиган трикотажный','Синий на пуговицах', '750 грн.', 'usual', 'распродажа')
+                        +catalog-item('files/img/catalog-1.png','Бомбер','На мальчика')
+                        +catalog-item('files/img/catalog-1.png','Кардиган трикотажный','Синий на пуговицах', '750 грн.', 'warning', 'Новинка')
+                        +catalog-item('files/img/catalog-1.png','Кардиган трикотажный','Синий на пуговицах', '750 грн.')
+                        +catalog-item('files/img/catalog-1.png','Бомбер','На мальчика')
+                        +catalog-item('files/img/catalog-1.png','Платье','Со съемным воротником')
+                        +catalog-item('files/img/catalog-1.png','Кардиган трикотажный','Синий на пуговицах', '750 грн.')
+                        +catalog-item('files/img/catalog-1.png','Бомбер','На мальчика')
+                        +catalog-item('files/img/catalog-1.png','Платье','Со съемным воротником')
+                    .catalog-footer
+                        a.button Показать еще
+                        include _includes/_paginator.pug
+            a.
+        include _includes/_footer.pug

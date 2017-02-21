@@ -1,0 +1,188 @@
+html {
+    height: 100%;
+}
+
+body {
+    min-height: 100%;
+    position: relative;
+    background: url(../files/img/cell.png) #f0f0f0;
+}
+
+.overlay {
+    background: rgba(0,0,0,0.7);
+    z-index: 11;
+    @extend %full;
+    transition: 300ms all ease-out;
+}
+
+
+main.content {
+    background: #f0f0f0;
+    padding-top: rem-calc(30px);
+    @extend %clear;
+    aside.sidebar {
+        float: left;
+        width: 310px;
+    }
+    section.catalog {
+        margin-left: 325px;
+    }
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+.full {
+    @extend .row;
+    max-width: none;
+    padding: 0;
+    .column {
+        padding: 0;
+    }
+}
+
+.breadcrumbs {
+    margin-bottom: 9px;
+    li {
+        text-transform: none;
+
+        a {
+            color: $light-gray;
+        }
+        span {
+            color: $white;
+        }
+    }
+    li:not(:last-child):after {
+        content: "/";
+        font: normal normal normal 14px/1 FontAwesome;
+        color: $light-gray;
+        margin: 0 4px;
+    }
+}
+
+.tabs {
+    border: 0;
+    &-item {
+        padding-left: 43px;
+        padding-right: 0px;
+        border-top: $input-border;
+        h5 {
+
+            margin: 16px 0 18px;
+            letter-spacing: 0.3px;
+            position: relative;
+            cursor: pointer;
+            &:before {
+                font: normal normal normal 18px/1 FontAwesome;
+                color: #4c4c4c;
+                content: "\f105";
+                position: absolute;
+                right: 100%;
+                padding-right: 18px;
+                top: 2px;
+            }
+            &.active {
+                &:before {
+                    transform-origin: 0;
+                    padding-right: 15px;
+                    top: 0;
+                    transform: rotate(90deg);
+                }
+            }
+        }
+        p {
+            line-height: 26px;
+            margin-bottom: 22px;
+            letter-spacing: 0.25px;
+        }
+        ul {
+            margin-left: 15px;
+            li {
+                letter-spacing: 0.25px;
+                list-style-type: disc;
+                margin-bottom: 10px;
+            }
+        }
+        &:last-child {
+            border-bottom: $input-border;
+        }
+        &-inner {
+            margin-top: 21px;
+            padding-bottom: 25px;
+        }
+    }
+}
+
+.reveal {
+    padding-top: 25px;
+    padding-bottom: 25px;
+
+    border-color: transparent;
+    outline-color: transparent;
+    h2, p {
+        color: #4c4c4c;
+
+    }
+    h2 {
+        font-size: 26px;
+        font-weight: bold;
+        margin-bottom: 1.35em;
+        text-transform: uppercase;
+    }
+    p {
+        font-size: 14px;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    table {
+        td {
+            text-align: center;
+        }
+    }
+    .button {
+        margin-bottom: 15px;
+        min-width: auto;
+        @media #{$medium-up} {
+            margin-bottom: 0;
+        }
+    }
+    .reveal-actions {
+        margin-top: 47px;
+    }
+    &.xsmall {
+        @media #{$medium-up} {
+            width: 360px;
+        }
+    }
+    &-close {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+        color: $success-color;
+        .fa {
+            font-size: 16px;
+        }
+    }
+}
+
+
+.page {
+    &-heading {
+        padding-top: 17px;
+        padding-bottom: 14px;
+        background: url(../files/img/pattern-1.png) $success-color;
+    }
+    &-title {
+        font-size: 16px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: $white;
+    }
+}
+
