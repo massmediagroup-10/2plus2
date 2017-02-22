@@ -1,0 +1,25 @@
+doctype html
+html
+    include _includes/_head.pug
+    body
+        include _includes/_header.pug
+        .page-heading
+            .row.column
+                .breadcrumbs
+                    ul
+                        li
+                            a Главная
+                        li
+                            a Каталог
+                        li
+                            span Кардиган трикотажный
+                .page-title Кардиган трикотажный
+        main.content
+            .row.detail-top
+                include _includes/_detail_slider.pug
+                include _includes/_detail_main.pug
+            .row.column
+                include _includes/_detail_tabs.pug
+
+            a.
+        include _includes/_footer.pug

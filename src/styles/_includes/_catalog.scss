@@ -1,6 +1,7 @@
 .catalog {
     &-head {
-        margin-bottom: rem-calc(15px);
+        margin-bottom:5px;
+        line-height: rem-calc(60px);
         select {
             width: 150px;
         }
@@ -104,6 +105,7 @@
             font-size: 14px;
             font-weight: bold;
             text-transform: uppercase;
+            text-align: center;
             &.warning {
                 background: $warning-color;
                 color: #fff;

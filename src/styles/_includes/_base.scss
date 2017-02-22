@@ -7,9 +7,6 @@ main {
     z-index: 1;
 }
 
-main.content {
-}
-
 ul {
     ul {
         margin: 0;
@@ -44,6 +41,9 @@ iframe {
     max-width: 300px;
     text-decoration: none;
     @extend %last;
+    &.block {
+        max-width: none;
+    }
     &.wide {
         width: 230px;
     }
@@ -79,6 +79,12 @@ iframe {
                 color: $button-background-hover;
                 border-color: $button-background-hover;
             }
+        }
+    }
+    &.secondary {
+        background: #b3b3b3;
+        &:hover {
+            background: $medium-gray;
         }
     }
 }
@@ -178,6 +184,15 @@ iframe {
         span {
             color: $success-color;
         }
+    }
+}
+
+.ctext {
+    p {
+        font-size: 14px;
+        line-height: 1.73em;
+        margin-bottom: 0.8em;
+        @extend %last;
     }
 }
 

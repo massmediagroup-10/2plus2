@@ -117,10 +117,10 @@ select {
             box-shadow: none;
         }
         &:focus {
-            box-shadow: 0 0 0px 1px #00b7f4 !important;
+            box-shadow: 0 0 0px 1px $active-color !important;
         }
         &.error {
-            box-shadow: 0 0 0px 1px #f24841 !important;
+            box-shadow: 0 0 0px 1px $warning-color !important;
         }
         &::-webkit-input-placeholder {
             color: $lighter-gray;

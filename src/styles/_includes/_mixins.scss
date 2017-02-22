@@ -29,6 +29,13 @@
     display: block;
 }
 
+%vfix {
+    height: 100%;
+    width: 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 %table,
 .table,
 .vertical-box {

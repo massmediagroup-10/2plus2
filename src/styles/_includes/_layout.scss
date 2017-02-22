@@ -17,9 +17,11 @@ body {
 
 
 main.content {
-    background: #f0f0f0;
-    padding-top: rem-calc(30px);
     @extend %clear;
+    &:not(.index) {
+        padding-top: rem-calc(30px);
+        background: #f0f0f0;
+    }
     aside.sidebar {
         float: left;
         width: 310px;
@@ -63,59 +65,6 @@ main.content {
         font: normal normal normal 14px/1 FontAwesome;
         color: $light-gray;
         margin: 0 4px;
-    }
-}
-
-.tabs {
-    border: 0;
-    &-item {
-        padding-left: 43px;
-        padding-right: 0px;
-        border-top: $input-border;
-        h5 {
-
-            margin: 16px 0 18px;
-            letter-spacing: 0.3px;
-            position: relative;
-            cursor: pointer;
-            &:before {
-                font: normal normal normal 18px/1 FontAwesome;
-                color: #4c4c4c;
-                content: "\f105";
-                position: absolute;
-                right: 100%;
-                padding-right: 18px;
-                top: 2px;
-            }
-            &.active {
-                &:before {
-                    transform-origin: 0;
-                    padding-right: 15px;
-                    top: 0;
-                    transform: rotate(90deg);
-                }
-            }
-        }
-        p {
-            line-height: 26px;
-            margin-bottom: 22px;
-            letter-spacing: 0.25px;
-        }
-        ul {
-            margin-left: 15px;
-            li {
-                letter-spacing: 0.25px;
-                list-style-type: disc;
-                margin-bottom: 10px;
-            }
-        }
-        &:last-child {
-            border-bottom: $input-border;
-        }
-        &-inner {
-            margin-top: 21px;
-            padding-bottom: 25px;
-        }
     }
 }
 
