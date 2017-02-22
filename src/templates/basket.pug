@@ -1,0 +1,42 @@
+doctype html
+html
+    include _includes/_head.pug
+    body
+        include _includes/_header.pug
+        .page-heading
+            .row.column
+                .breadcrumbs
+                    ul
+                        li
+                            a Главная
+                        li
+                            span Корзина
+                .page-title Корзина
+        main.content
+            .basket.form
+                .row
+                    .small-12.large-3.column.float-right
+                        .shopping-card
+                            .shopping-card-header
+                                .row
+                                    .small-6.column.text-left Заказ
+                                    .small-6.column.text-right Всего
+                            .shopping-card-body
+                                .row
+                                    .small-6.column.text-left 3 товар(а)
+                                    .small-6.column.text-right
+                                        b
+                                            span 3 050 грн.
+                            .shopping-card-footer.text-center
+                                a.button.wide(href="#") оформить заказ
+                                .clearfix
+                                a.button.white.wide(href="#")
+                                    span продолжить покупки
+                    .small-12.large-9.column.float-right
+                        include _includes/_basket_item.pug
+                        include _includes/_basket_item.pug
+                        include _includes/_basket_item.pug
+
+            include _includes/_latest.pug
+
+        include _includes/_footer.pug

@@ -22,6 +22,9 @@
             letter-spacing: 1px;
             margin-bottom: 2px;
         }
+        @media #{$large-up} {
+            padding-left: $gutter-medium-full;
+        }
     }
     &-variable {
         h6 {
@@ -110,7 +113,7 @@
             display: block;
             float: left;
             background-color: rgb(179, 179, 179);
-            width: 60px;
+            width: 65px;
             height: 35px;
             line-height: 35px;
             text-align: center;
@@ -133,6 +136,7 @@
             vertical-align: middle;
             white-space: nowrap;
             color: $success-color;
+            text-transform: none;
             &:not(:last-child) {
                 margin-right: 10px;
             }
@@ -159,9 +163,13 @@
         }
         &.small {
             span {
-                font-size: 14px;
+                font-size: 16px;
+                line-height: 20px;
                 &:after {
                     top: calc(50% + 0px);
+                }
+                &.old {
+                    font-size: 14px;
                 }
             }
         }
@@ -183,7 +191,7 @@
             position: relative;
 
             @media #{$large-up} {
-                width: calc(100% - 130px);
+                width: calc(100% - 132px);
                 margin-bottom: 0px;
             }
             .slick-track {
@@ -225,6 +233,9 @@
     }
     &-description {
         font-size: 14px;
+        @media #{$large-up} {
+            padding-left: $gutter-medium;
+        }
         h6 {
             color: $primary-color;
             text-transform: uppercase;
@@ -249,8 +260,11 @@
             margin-bottom: 1.5em;
         }
         &-form {
+            @media #{$large-up} {
+                padding-left: $gutter-medium-full;
+            }
             input[type='text'] {
-                width: calc(100% - 105px);
+                width: calc(100% - 106px);
             }
             .button {
                 min-width: auto;

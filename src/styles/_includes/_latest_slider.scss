@@ -1,0 +1,35 @@
+.latest-slider {
+    padding-top: 35px;
+    margin-bottom: rem-calc(45px);
+    .slick-arrow {
+        background-color: rgba(95, 120, 165, 0.75);
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        display: block;
+        z-index: 2;
+        text-align: center;
+        top: calc(50% - 25px);
+        i {
+            font-size: 30px;
+            color: #fff;
+            vertical-align: middle;
+        }
+        &:after {
+            content: '';
+            @extend %vfix;
+        }
+    }
+    .slick-prev {
+        left: 0;
+        i {
+            transform: translateX(-2px);
+        }
+    }
+    .slick-next {
+        right: 0;
+        i {
+            transform: translateX(2px);
+        }
+    }
+}

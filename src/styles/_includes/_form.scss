@@ -110,6 +110,7 @@ select {
         font-size: rem-calc(14px);
         padding-left: 12px;
         border: 0;
+        box-shadow: 0 0 0px 1px #dddddd !important;
         &:not(textarea) {
             height: 40px;
         }

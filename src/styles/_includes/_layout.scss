@@ -24,10 +24,17 @@ main.content {
     }
     aside.sidebar {
         float: left;
-        width: 310px;
+        width: 302px;
+        display: none;
+
+        @media #{$large-up} {
+            display: block;
+        }
     }
     section.catalog {
-        margin-left: 325px;
+        @media #{$large-up} {
+            margin-left: 318px;
+        }
     }
 }
 

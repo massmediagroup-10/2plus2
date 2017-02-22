@@ -1,0 +1,54 @@
+.shopping-card {
+    margin-bottom: 30px;
+    &-header {
+        color: #333333;
+        font-size: 16px;
+        font-weight: bold;
+        background: #d9d9d9;
+        padding: 0 20px;
+        line-height: 55px;
+        text-transform: uppercase;
+        @media #{$small-only} {
+            font-size: 16px;
+        }
+    }
+    &-body {
+        background: $white;
+        font-size: 16px;
+        padding: 25px 20px 36px 20px;
+        b {
+            font-size: 18px;
+            span {
+                padding-right: 6px;
+            }
+        }
+    }
+    &-footer {
+        padding: 26px 20px 23px 20px;
+        background: $white;
+        position: relative;
+        &:before {
+            content: '';
+            display: block;
+            border-top: 1px solid #cccccc;
+            position: absolute;
+            left: 20px;
+            right: 20px;
+            top: 0;
+        }
+        a:not(.button) {
+            font-size: 12px;
+            text-decoration: underline;
+            text-transform: uppercase;
+            font-weight: bold;
+            color: $secondary-color;
+            display: inline-block;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        .button {
+            margin-bottom: 19px;
+        }
+    }
+}

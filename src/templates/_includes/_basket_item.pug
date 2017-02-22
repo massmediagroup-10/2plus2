@@ -1,0 +1,34 @@
+.basket-item
+    .row
+        .large-6.column
+            a.basket-remove.remove-small(data-open="removeModal")
+                i.fa.fa-remove.warning
+                span Видалити з кошика
+            .catalog-item
+                .catalog-item-label.usual распродажа
+                .catalog-item-image
+                    a(href="#")
+                        img(src='http://placehold.it/116x116')
+            .basket-item-description
+                h6
+                    a Кардиган трикотажный
+                p.subtitle Синий на пуговицах
+                p Код товара: 17398643
+                .detail-price.small
+                    span 650 грн.
+                    span.old 750 грн.
+        .basket-item-info.large-2.small-3.column
+            p Размер
+            select
+                option(value='100') 100
+                option(value='150') 150
+        .basket-item-info.large-2.small-3.column.end
+            p Количество
+            input(type="number",min="1")
+        .basket-item-info.large-2.column.end
+            a.basket-remove.remove-large(data-open="removeModal")
+                i.fa.fa-remove.warning
+                span Видалити з кошика
+            p Сума
+            .detail-price.small
+                span 650 грн.
