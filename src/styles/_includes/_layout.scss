@@ -12,12 +12,14 @@ body {
     background: rgba(0,0,0,0.7);
     z-index: 11;
     @extend %full;
+    top: -70px;
     transition: 300ms all ease-out;
 }
 
 
 main.content {
     @extend %clear;
+    margin-top: $header-height;
     &:not(.index) {
         padding-top: rem-calc(30px);
         background: #f0f0f0;

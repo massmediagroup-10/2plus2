@@ -13,6 +13,7 @@
 @mixin transition($delay:200, $property:all , $function:linear) {
     -webkit-transition: $property #{$delay}ms $function;
 }
+
 @mixin display-flex($justify: flex-left, $align: center) {
     display: flex;
     justify-content: $justify;
@@ -99,5 +100,14 @@
     }
     to {
         transform: rotate(-180deg)
+    }
+}
+
+@keyframes pulse {
+    0%, 10%, 20%, 60%, 70%, 80% {
+        transform: translateY(0px);
+    }
+    5%, 15%, 65%, 75% {
+        transform: translateY(4px);
     }
 }

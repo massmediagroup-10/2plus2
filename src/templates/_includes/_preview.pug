@@ -1,8 +1,12 @@
 .preview
     .preview-top.full.large-collapse
-        .large-6.column
-            img(src="files/img/collection-1.png")
-        .large-6.column
-            img(src="files/img/collection-2.png")
-    .preview-main(style="background-image: url(files/img/preview-1.png)")
+        .preview-top-side.large-6.column(style='background-image:url(files/img/collection-1.png)')
+        .preview-top-side.large-6.column(style='background-image:url(files/img/collection-2.png)')
+        .preview-scroll
+            a(href='#')
+                i.icon.icon-scroll
+    .preview-main(style='background-image: url(files/img/preview-1.png)',
+    data-center='background-position: 50% 0px;',
+    data-bottom-top='background-position: 50% 80px;',
+    data-top-bottom='background-position: 50% -80px;')
 

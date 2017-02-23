@@ -236,9 +236,33 @@ function checkoutItem() {
     });
 }
 
+function skrollrHandler() {
+    if (isMobile()) {
+        var s = skrollr.init();
+        s.destroy();
+    } else {
+        var s = skrollr.init({
+            forceHeight: false
+        });
+    }
+}
+
+function previewScroll() {
+    $(document).on('click', '.preview-scroll', function(e) {
+        e.preventDefault();
+        var target = $('.preview-main').offset().top;
+        $('body, html')
+            .animate({
+                scrollTop: target
+            }, 500);
+    });
+}
+
 $(document).ready(function() {
     foundation();
     footerplaceholder();
+    skrollrHandler();
+    previewScroll();
     navigation();
     headerSearch();
     initSliders();
@@ -255,5 +279,6 @@ $(document).ready(function() {
     $(window).resize(function() {
         footerplaceholder();
         tabsResponsive();
+        skrollrHandler();
     });
 });

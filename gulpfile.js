@@ -146,7 +146,8 @@ gulp.task('scripts', function() {
         'node_modules/foundation-sites/js/foundation.util.box.js',
         'node_modules/foundation-sites/js/foundation.util.triggers.js',
         'node_modules/foundation-sites/js/foundation.reveal.js',
-        'node_modules/foundation-sites/js/foundation.dropdown.js' 
+        'node_modules/foundation-sites/js/foundation.dropdown.js',
+        'node_modules/skrollr/src/skrollr.js'
     ])
         .pipe(plumber({
             errorHandler: notify.onError({
