@@ -1,0 +1,190 @@
+doctype html
+html
+    include _includes/_head.pug
+    body
+        include _includes/_header.pug
+        .page-heading
+            .row.column
+                .breadcrumbs
+                    ul
+                        li
+                            a Главная
+                        li
+                            span Оформление заказа
+                .page-title Оформление заказа
+        main.content
+            .checkout.row
+                .small-12.large-4.column.float-right
+                    .shopping-card
+                        .shopping-card-header
+                            .row
+                                .small-6.column.text-left Заказ
+                                .small-6.column.text-right Всего
+                        .shopping-card-body
+                            .row
+                                .small-6.column.text-left 2 товар(a)
+                                .small-6.column.text-right
+                                    b
+                                        span 198.00 грн
+                        .shopping-card-footer.text-center
+                            a.button.white.wide(href="#")
+                                span редактировать заказ
+
+                .small-12.large-8.column.float-right
+                    .checkout-inner
+                        .checkout-item.form.active
+                            form(name="quick_order")
+                                .checkout-title
+                                    a
+                                        i.fa.fa-angle-right
+                                        span быстрый заказ
+                                .checkout-body
+                                    .row
+                                        .large-4.column
+                                            label
+                                                | Номер мобильного
+                                                em *
+                                                input(type="tel", placeholder="Введите Ваш номер ", required="required")
+                                        .large-4.column.plain
+                                            input.button.block(type="submit",value="ЗАКАЗАТЬ")
+                                        .large-4.column.plain
+                                            p.important
+                                                span
+                                                    | Менеджер звяжиться с Вами
+                                                    |    и уточнит детали заказа.
+                        .checkout-item.form
+                            form(name="existing_customer")
+                                .checkout-title
+                                    a
+                                        i.fa.fa-angle-right
+                                        span постоянный клиент
+                                .checkout-body
+                                    .row
+                                        .large-4.column
+                                            label
+                                                | E-mail
+                                                input(type="email",placeholder="Введите Ваш email", required="required")
+                                        .large-4.column
+                                            label
+                                                | Пароль
+                                                input(type="password",placeholder="Введите пароль", required="required")
+                                        .large-4.column.plain
+                                            input.button.block(type="submit",value="Войти")
+                                            a.float-left(data-open="forgotpass") Забыли пароль?
+                                    .row
+                                        .large-8.column.end
+                                            .form-label Или войти через
+                                    .row
+                                        .large-4.column
+                                            a.button.block.thin.facebook
+                                                i.fa.fa-facebook
+                                                span Facebook
+                                        .large-4.column.end
+                                            a.button.block.thin.vk
+                                                i.fa.fa-vk
+                                                span Vkontakte
+                        .checkout-item.form
+                            form(name="new_customer")
+                                .checkout-title
+                                    a
+                                        i.fa.fa-angle-right
+                                        span новый клиент
+                                .checkout-body
+                                    .row
+                                        .large-4.column.end
+                                            label
+                                                | Номер мобильного
+                                                em *
+                                                input(type="tel", placeholder="Введите Ваш номер", required="required")
+                                        .large-4.column.end
+                                            label
+                                                | E-mail
+                                                input(type="email",placeholder="Введите email")
+                                    .row
+                                        .large-4.column.end
+                                            label
+                                                | Имя
+                                                em *
+                                                input(type="text", placeholder="Введите Ваше имя", required="required")
+                                        .large-4.column.end
+                                            label
+                                                | Фамилия
+                                                em *
+                                                input(type="text",placeholder="Введите Вашу фамилию", required="required")
+                                    .filter-area
+                                        .row.column
+                                            h6
+                                                | Доставка
+                                                em *
+                                        .row.filter-item
+                                            .large-4.column
+                                                .filter-field.radio-group
+                                                    input#radio1(type='radio',name="delivery")
+                                                    label.radio(for='radio1')
+                                                        span.box
+                                                            i.fa
+                                                        | Новая почта, 1-3 дня от 35 грн
+                                            .large-4.column
+                                                select.block
+                                                    option(value="") Выберите город
+                                            .large-4.column
+                                                select.block
+                                                    option(value="") Выберите склад
+                                        .row.filter-item
+                                            .large-4.column
+                                                .filter-field.radio-group
+                                                    input#radio2(type='radio',name="delivery")
+                                                    label.radio(for='radio2')
+                                                        span.box
+                                                            i.fa
+                                                        | Курьер, только по Киеву
+                                            .large-8.column
+                                                input(type='text', placeholder='Введите адрес')
+                                        .row.filter-item
+                                            .large-4.column
+                                                .filter-field.radio-group
+                                                    input#radio6(type='radio',name="delivery")
+                                                    label.radio(for='radio6')
+                                                        span.box
+                                                            i.fa
+                                                        | Самовывоз
+                                    .filter-area
+                                        .row.column
+                                            h6
+                                                | Оплата
+                                                em *
+                                        .row.filter-item
+                                            .large-4.column.end
+                                                .filter-field.radio-group
+                                                    input#radio3(type='radio',name="paymant")
+                                                    label.radio(for='radio3')
+                                                        span.box
+                                                            i.fa
+                                                        | Приват24
+                                        .row.filter-item
+                                            .large-4.column.end
+                                                .filter-field.radio-group
+                                                    input#radio4(type='radio',name="paymant")
+                                                    label.radio(for='radio4')
+                                                        span.box
+                                                            i.fa
+                                                        | Оплата при получении
+                                    .row
+                                        .large-8.column.end
+                                            label
+                                                | Добавить комментарии
+                                                textarea(placeholder="Введите Ваш комментарий",rows="1")
+                                    .row.column
+                                        input.button(type="submit",value="заказать")
+
+        #forgotpass.reveal.xsmall(data-reveal='',data-options="showDelay:300; hideDelay:300")
+            a.reveal-close(aria-label='Close', data-close)
+                i.fa.fa-close
+            h2.text-center Забыли пароль?
+            .form
+                input(type="email",placeholder="Введите Ваш email", required="required")
+                p
+                    | Введите Ваш email, чтобы мы восстановили пароль.
+                input.button.block.thin(type="submit",value="Возобновить пароль")
+
+        include _includes/_footer.pug

@@ -216,6 +216,26 @@ function detailSize() {
     });
 }
 
+function checkoutItem() {
+    $('.checkout-item').not('.active').find('.checkout-body').slideUp(0);
+
+    $(document).on('click', '.checkout-title a', function() {
+        var checkout = $(this).parent();
+        var item = $(this).closest('.checkout-item');
+
+        $('.checkout-body').stop().slideUp();
+        $('.checkout-item').not(item).stop().removeClass('active');
+
+        if (item.hasClass('active')) {
+            item.stop().removeClass('active');
+            checkout.siblings('.checkout-body').stop().slideUp();
+        } else {
+            item.stop().addClass('active');
+            checkout.siblings('.checkout-body').stop().slideDown();
+        }
+    });
+}
+
 $(document).ready(function() {
     foundation();
     footerplaceholder();
@@ -226,6 +246,7 @@ $(document).ready(function() {
     tabsResponsive();
     detailColor();
     detailSize();
+    checkoutItem();
 
     $('form').each(function() {
         $(this).validate();

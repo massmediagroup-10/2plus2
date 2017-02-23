@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>a.nuzhin | 2plus2</title>
+    <meta charset="utf-8">
+    <meta name="author" content="a.nuzhin">
+    <meta name="description" content="layout for 2plus2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="./assets/">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/slick.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-contacts large-5 column"><a class="menu-toggle"><i class="icon icon-bars"></i></a>
+        <p>+38 (044) 279-62-26, Киев, ул. Лютеранская, 11 А</p>
+      </div>
+      <div class="header-logo large-2 column text-center"><a href="/"><img src="files/img/logo.png" alt=""></a></div>
+      <div class="header-menu large-5 column">
+        <ul>
+          <li>
+            <div class="header-search"><i class="fa fa-search"></i>
+              <input placeholder="Поиск">
+            </div>
+          </li>
+          <li><a class="underline" data-toggle="account"><span>Личный кабинет</span></a>
+            <ul class="dropdown-pane dropdown-menu" id="account" data-dropdown>
+              <li><a href="#">войти</a></li>
+              <li><a href="#">Мои данные</a></li>
+              <li><a href="#">сменить пароль</a></li>
+              <li><a href="#">Заказы</a></li>
+            </ul>
+          </li>
+          <li><a class="basket-label" data-toggle="drop-basket" data-options="align:right"><i class="icon icon-bag"></i><span>12</span></a>
+            <div class="dropdown-pane dropdown-basket" id="drop-basket" data-dropdown>
+              <p>
+                в корзине 12 товаров <br>
+                на сумму 1 115 грн.
+              </p><a class="button block">оформить заказ</a><a class="button white block"><span>перейти в корзину</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </header>
+    <nav class="navigation"><a class="navigation-close"><i class="icon icon-close"></i></a>
+      <h6>МЕНЮ</h6>
+      <ul>
+        <li><a>Школьная форма</a></li>
+        <li><a>Пиджаки и куртки</a></li>
+        <li><a>Брюки и шорты</a></li>
+        <li><a>Свитера</a></li>
+        <li><a>Рубашки</a></li>
+        <li><a>Футболки и майки</a></li>
+        <li><a>Платья и юбки</a></li>
+        <li><a>Статьи</a></li>
+        <li><a>Доставка</a></li>
+        <li><a>Оплата</a></li>
+        <li><a>Контакти</a></li>
+      </ul>
+      <p>+38 (044) 279 62 26</p>
+      <div class="navigation-icons"><a><i class="fa fa-facebook"></i></a><a><i class="fa fa-instagram"></i></a><a><i class="fa fa-vk"></i></a></div>
+    </nav>
+    <div class="page-heading">
+      <div class="row column">
+        <div class="breadcrumbs">
+          <ul>
+            <li><a>Главная</a></li>
+            <li><span>Оформление заказа</span></li>
+          </ul>
+        </div>
+        <div class="page-title">Оформление заказа</div>
+      </div>
+    </div>
+    <main class="content">
+      <div class="checkout row">
+        <div class="small-12 large-4 column float-right">
+          <div class="shopping-card">
+            <div class="shopping-card-header">
+              <div class="row">
+                <div class="small-6 column text-left">Заказ</div>
+                <div class="small-6 column text-right">Всего</div>
+              </div>
+            </div>
+            <div class="shopping-card-body">
+              <div class="row">
+                <div class="small-6 column text-left">2 товар(a)</div>
+                <div class="small-6 column text-right"><b><span>198.00 грн</span></b></div>
+              </div>
+            </div>
+            <div class="shopping-card-footer text-center"><a class="button white wide" href="#"><span>редактировать заказ</span></a></div>
+          </div>
+        </div>
+        <div class="small-12 large-8 column float-right">
+          <div class="checkout-inner">
+            <div class="checkout-item form active">
+              <form name="quick_order">
+                <div class="checkout-title"><a><i class="fa fa-angle-right"></i><span>быстрый заказ</span></a></div>
+                <div class="checkout-body">
+                  <div class="row">
+                    <div class="large-4 column">
+                      <label>Номер мобильного<em>*</em>
+                        <input type="tel" placeholder="Введите Ваш номер " required="required">
+                      </label>
+                    </div>
+                    <div class="large-4 column plain">
+                      <input class="button block" type="submit" value="ЗАКАЗАТЬ">
+                    </div>
+                    <div class="large-4 column plain">
+                      <p class="important"><span>
+                          Менеджер звяжиться с Вами
+                             и уточнит детали заказа.</span></p>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="checkout-item form">
+              <form name="existing_customer">
+                <div class="checkout-title"><a><i class="fa fa-angle-right"></i><span>постоянный клиент</span></a></div>
+                <div class="checkout-body">
+                  <div class="row">
+                    <div class="large-4 column">
+                      <label>E-mail
+                        <input type="email" placeholder="Введите Ваш email" required="required">
+                      </label>
+                    </div>
+                    <div class="large-4 column">
+                      <label>Пароль
+                        <input type="password" placeholder="Введите пароль" required="required">
+                      </label>
+                    </div>
+                    <div class="large-4 column plain">
+                      <input class="button block" type="submit" value="Войти"><a class="float-left" data-open="forgotpass">Забыли пароль?</a>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="large-8 column end">
+                      <div class="form-label">Или войти через</div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="large-4 column"><a class="button block thin facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a></div>
+                    <div class="large-4 column end"><a class="button block thin vk"><i class="fa fa-vk"></i><span>Vkontakte</span></a></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="checkout-item form">
+              <form name="new_customer">
+                <div class="checkout-title"><a><i class="fa fa-angle-right"></i><span>новый клиент</span></a></div>
+                <div class="checkout-body">
+                  <div class="row">
+                    <div class="large-4 column end">
+                      <label>Номер мобильного<em>*</em>
+                        <input type="tel" placeholder="Введите Ваш номер" required="required">
+                      </label>
+                    </div>
+                    <div class="large-4 column end">
+                      <label>E-mail
+                        <input type="email" placeholder="Введите email">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="large-4 column end">
+                      <label>Имя<em>*</em>
+                        <input type="text" placeholder="Введите Ваше имя" required="required">
+                      </label>
+                    </div>
+                    <div class="large-4 column end">
+                      <label>Фамилия<em>*</em>
+                        <input type="text" placeholder="Введите Вашу фамилию" required="required">
+                      </label>
+                    </div>
+                  </div>
+                  <div class="filter-area">
+                    <div class="row column">
+                      <h6>Доставка<em>*</em></h6>
+                    </div>
+                    <div class="row filter-item">
+                      <div class="large-4 column">
+                        <div class="filter-field radio-group">
+                          <input id="radio1" type="radio" name="delivery">
+                          <label class="radio" for="radio1"><span class="box"><i class="fa"></i></span>Новая почта, 1-3 дня от 35 грн</label>
+                        </div>
+                      </div>
+                      <div class="large-4 column">
+                        <select class="block">
+                          <option value="">Выберите город</option>
+                        </select>
+                      </div>
+                      <div class="large-4 column">
+                        <select class="block">
+                          <option value="">Выберите склад</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="row filter-item">
+                      <div class="large-4 column">
+                        <div class="filter-field radio-group">
+                          <input id="radio2" type="radio" name="delivery">
+                          <label class="radio" for="radio2"><span class="box"><i class="fa"></i></span>Курьер, только по Киеву</label>
+                        </div>
+                      </div>
+                      <div class="large-8 column">
+                        <input type="text" placeholder="Введите адрес">
+                      </div>
+                    </div>
+                    <div class="row filter-item">
+                      <div class="large-4 column">
+                        <div class="filter-field radio-group">
+                          <input id="radio6" type="radio" name="delivery">
+                          <label class="radio" for="radio6"><span class="box"><i class="fa"></i></span>Самовывоз</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="filter-area">
+                    <div class="row column">
+                      <h6>Оплата<em>*</em></h6>
+                    </div>
+                    <div class="row filter-item">
+                      <div class="large-4 column end">
+                        <div class="filter-field radio-group">
+                          <input id="radio3" type="radio" name="paymant">
+                          <label class="radio" for="radio3"><span class="box"><i class="fa"></i></span>Приват24</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row filter-item">
+                      <div class="large-4 column end">
+                        <div class="filter-field radio-group">
+                          <input id="radio4" type="radio" name="paymant">
+                          <label class="radio" for="radio4"><span class="box"><i class="fa"></i></span>Оплата при получении</label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="large-8 column end">
+                      <label>Добавить комментарии
+                        <textarea placeholder="Введите Ваш комментарий" rows="1"></textarea>
+                      </label>
+                    </div>
+                  </div>
+                  <div class="row column">
+                    <input class="button" type="submit" value="заказать">
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <div class="reveal xsmall" id="forgotpass" data-reveal="" data-options="showDelay:300; hideDelay:300"><a class="reveal-close" aria-label="Close" data-close><i class="fa fa-close"></i></a>
+      <h2 class="text-center">Забыли пароль?</h2>
+      <div class="form">
+        <input type="email" placeholder="Введите Ваш email" required="required">
+        <p>Введите Ваш email, чтобы мы восстановили пароль.</p>
+        <input class="button block thin" type="submit" value="Возобновить пароль">
+      </div>
+    </div>
+    <div class="footer_placeholder"></div>
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="row">
+          <div class="large-6 column">
+            <div class="row">
+              <div class="footer-column medium-4 column">
+                <h6>Каталог</h6>
+                <ul>
+                  <li><a>Школьная форма</a></li>
+                  <li><a>Пиджаки и куртки</a></li>
+                  <li><a>Брюки и шорты</a></li>
+                  <li><a>Свитера</a></li>
+                  <li><a>Рубашки</a></li>
+                  <li><a>Футболки и майки</a></li>
+                  <li><a>Платья и юбки</a></li>
+                </ul>
+              </div>
+              <div class="footer-column medium-4 column">
+                <h6>Информация</h6>
+                <ul>
+                  <li><a>Статьи</a></li>
+                  <li><a>Контакты</a></li>
+                  <li><a>О нас</a></li>
+                </ul>
+              </div>
+              <div class="footer-column medium-4 column">
+                <h6>Контакты</h6>
+                <p>
+                  +38 (044) 279-62-26
+                  info@2x2.tm
+                  Киев, ул. Лютеранская, 11А
+                </p>
+                <div class="footer-icons"><a><i class="fa fa-facebook"></i></a><a><i class="fa fa-instagram"></i></a><a><i class="fa fa-vk"></i></a></div>
+              </div>
+            </div>
+            <div class="footer-form row column">
+              <h6>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</h6>
+              <div class="footer-field form">
+                <input type="text" placeholder="Введите Ваш номер ">
+                <input class="button" type="submit" value="Заказать">
+              </div>
+            </div>
+          </div>
+          <div class="large-6 column">
+            <div class="footer-socials"><img src="files/img/social_temp.png"></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright row">
+        <div class="large-6 column">
+          <p>Все права защищены © 2 x 2, 2015 - 2016</p>
+        </div>
+        <div class="large-6 column">
+          <p class="text-right"><a>MassMedia Group</a>- Создание и поддержка сайта</p>
+        </div>
+        <div class="footer-logo column text-center"><a><img src="files/img/logo-big.png"></a></div>
+      </div>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/script.js"></script>
+      <script src="js/slick.min.js"></script>
+    </footer>
+  </body>
+</html>

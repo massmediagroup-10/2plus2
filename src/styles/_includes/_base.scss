@@ -38,9 +38,13 @@ iframe {
     font-weight: bold;
     text-transform: uppercase;
     min-width: 160px;
-    max-width: 300px;
     text-decoration: none;
     @extend %last;
+    i {
+        font-size: 15px;
+        margin-right: 7px;
+        @extend %inline-middle;
+    }
     &.block {
         max-width: none;
     }
@@ -71,7 +75,6 @@ iframe {
                 right: 0;
                 bottom: -8px;
                 border-bottom: 3px solid $active-color;
-                transition: 300ms bottom ease;
             }
         }
         &:hover {
@@ -85,6 +88,29 @@ iframe {
         background: #b3b3b3;
         &:hover {
             background: $medium-gray;
+        }
+    }
+    &.thin {
+        font-weight: normal;
+        text-transform: none;
+    }
+    &.vk {
+        background: #507299;
+        &:hover {
+            background: #415c7a;
+        }
+    }
+    &.facebook {
+        background: #3b5998;
+        &:hover {
+            background: #2f477a;
+        }
+    }
+    &.vk,
+    &.facebook {
+        margin-bottom: 1em;
+        span {
+            @extend %inline-middle;
         }
     }
 }
@@ -136,31 +162,6 @@ iframe {
         font-weight: bold;
         margin: 0 rem-calc(40px);
     }
-    /*
-    a {
-        background: transparent !important;
-    }
-    span {
-        color: $pagination-item-color;
-        display: block;
-        padding: $pagination-item-padding;
-        border-radius: $global-radius;
-        cursor: default;
-    }
-    .fa {
-        font-size: 17px;
-        color: $medium-gray;
-    }
-    .arrow {
-        margin: 0 15px;
-        &:not(.unavailable) {
-            &:hover {
-                .fa {
-                    color: $primary-color;
-                }
-            }
-        }
-    }*/
 }
 
 .dropdown-pane {

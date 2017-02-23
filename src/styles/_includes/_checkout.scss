@@ -1,0 +1,128 @@
+.checkout {
+    color: $primary-color;
+    margin-bottom: rem-calc(60);
+    &-inner {
+        background: #fff;
+        padding: 26px $gutter-medium-full 10px $gutter-medium-full;
+    }
+    em {
+        color: #f24841;
+    }
+    h6 {
+        font-weight: normal;
+        text-transform: none;
+        margin-top: 9px;
+    }
+    h2 {
+        margin-bottom: 16px;
+    }
+    &-title {
+        padding-bottom: 2px;
+        margin-bottom: 9px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 23px;
+
+        .fa {
+            margin-right: 8px;
+            font-size: 20px;
+            width: 10px;
+            position: relative;
+            //transition: 300ms all ease;
+            left: 0;
+        }
+        span {
+            font-size: 16px;
+            text-transform: uppercase;
+            color: $active-color;
+        }
+        a {
+            &:hover {
+                text-decoration: none;
+                .fa {
+                    // left: 3px;
+                }
+            }
+        }
+
+    }
+    &-item {
+        &:not(:last-child){
+            border-bottom: 1px solid #e3e3e3;
+            margin-bottom: 14px;
+        }
+        &.active {
+            padding-bottom: 20px;
+            .checkout-title {
+                .fa {
+                    transform: rotate(90deg);
+                    top: 3px;
+                }
+            }
+        }
+        &.expanded {
+            border-bottom: 0;
+            .checkout-title {
+                border-bottom: 1px solid #e3e3e3;
+                padding-bottom: 12px;
+            }
+            .checkout-body {
+                padding: 0;
+            }
+        }
+    }
+    &-body {
+        padding-left: 21px;
+        margin-bottom: 20px;
+        @media #{$large-up} {
+            margin-bottom: 0px;
+        }
+        a:not(.button) {
+            text-decoration: underline;
+            font-size: 12px;
+            margin-top: -8px;
+            color: $active-color;
+            float: left;
+            &:hover {
+                text-decoration: none;
+                color: $medium-gray;
+            }
+        }
+        .plain {
+            padding-top: rem-calc(27px);
+        }
+        p {
+            font-size: 12px;
+            color: $lighter-gray;
+            &.important {
+                span {
+                    padding-left: 9px;
+                    display: block;
+                }
+                &:before {
+                    content: '*';
+                    float: left;
+                }
+            }
+        }
+        .filter-area {
+            margin-bottom: 14px;
+        }
+        .filter-item {
+            margin-bottom: 0px;
+            padding: 0;
+        }
+        &-socials {
+            margin-bottom: 20px;
+        }
+        .filter-field {
+            margin-bottom: 0;
+        }
+    }
+    &-comment {
+        padding-top: 10px;
+    }
+    &-footer {
+        margin-top: rem-calc(15px);
+    }
+}
