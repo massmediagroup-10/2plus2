@@ -36,29 +36,59 @@
               <p>
                 в корзине 12 товаров <br>
                 на сумму 1 115 грн.
-              </p><a class="button block">оформить заказ</a><a class="button white block"><span>перейти в корзину</span></a>
+              </p><a class="button block" href="#">оформить заказ</a><a class="button white block" href="#"><span>перейти в корзину</span></a>
             </div>
           </li>
         </ul>
       </div>
+      <div class="header-icons"><a data-open="accountModal"><i class="fa fa-user-circle"></i></a><a data-open="basketModal"><i class="fa fa-shopping-basket"></i></a></div>
     </header>
-    <nav class="navigation"><a class="navigation-close"><i class="icon icon-close"></i></a>
-      <h6>МЕНЮ</h6>
-      <ul>
-        <li><a>Школьная форма</a></li>
-        <li><a>Пиджаки и куртки</a></li>
-        <li><a>Брюки и шорты</a></li>
-        <li><a>Свитера</a></li>
-        <li><a>Рубашки</a></li>
-        <li><a>Футболки и майки</a></li>
-        <li><a>Платья и юбки</a></li>
-        <li><a>Статьи</a></li>
-        <li><a>Доставка</a></li>
-        <li><a>Оплата</a></li>
-        <li><a>Контакти</a></li>
-      </ul>
-      <p>+38 (044) 279 62 26</p>
-      <div class="navigation-icons"><a><i class="fa fa-facebook"></i></a><a><i class="fa fa-instagram"></i></a><a><i class="fa fa-vk"></i></a></div>
+    <nav class="navigation">
+      <div class="navigation-inner"><a class="navigation-close"><i class="icon icon-close"></i></a>
+        <h6>МЕНЮ</h6>
+        <ul>
+          <li><a href="#">Школьная форма</a></li>
+          <li><a href="#">Пиджаки и куртки</a></li>
+          <li><a href="#">Брюки и шорты</a></li>
+          <li><a href="#">Свитера</a></li>
+          <li><a href="#">Рубашки</a></li>
+          <li><a href="#">Футболки и майки</a></li>
+          <li><a href="#">Платья и юбки</a></li>
+          <li><a href="#">Статьи</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Оплата</a></li>
+          <li><a href="#">Контакти</a></li>
+        </ul>
+        <div class="navigation-responsive">
+          <div class="navigation-icons"><a data-open="searchModal"><i class="fa fa-search"></i></a></div>
+          <p>+38 (044) 279-62-26, Киев, <br> ул. Лютеранская, 11 А</p>
+        </div>
+        <p class="navigation-contacts">+38 (044) 279 62 26</p>
+        <div class="navigation-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-instagram"></i></a><a href="#"><i class="fa fa-vk"></i></a></div>
+        <div class="reveal xsmall" id="searchModal" data-reveal="" data-options="showDelay:300; hideDelay:300"><a class="reveal-close" aria-label="Close" data-close><i class="fa fa-close"></i></a>
+          <h2 class="text-center">Поиск</h2>
+          <div class="form">
+            <input type="text" placeholder="Например: Школьная форма" required="required">
+            <button class="button block accented"><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+        <div class="reveal xsmall" id="accountModal" data-reveal="" data-options="showDelay:300; hideDelay:300"><a class="reveal-close" aria-label="Close" data-close><i class="fa fa-close"></i></a>
+          <h2 class="text-center">Личный кабинет</h2>
+          <ul class="list-menu">
+            <li><a href="#"><i class="fa fa-angle-right"></i>Войти</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i>Мои данные</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i>Сменить пароль</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i>Заказы</a></li>
+          </ul>
+        </div>
+        <div class="reveal xsmall" id="basketModal" data-reveal="" data-options="showDelay:300; hideDelay:300"><a class="reveal-close" aria-label="Close" data-close><i class="fa fa-close"></i></a>
+          <h2 class="text-center">Корзина</h2>
+          <p>
+            в корзине 12 товаров <br>
+            на сумму 1 115 грн.
+          </p><a class="button block" href="#">оформить заказ</a><a class="button white block" href="#"><span>перейти в корзину</span></a>
+        </div>
+      </div>
     </nav>
     <div class="page-heading">
       <div class="row column">
@@ -121,7 +151,7 @@
                 </div>
                 <div class="basket-item-info large-2 column end"><a class="basket-remove remove-large" data-open="removeModal"><i class="fa fa-remove warning"></i><span>Видалити з кошика</span></a>
                   <p>Сума</p>
-                  <div class="detail-price small"><span>650 грн.</span></div>
+                  <div class="detail-price small"><span>1300 грн.</span></div>
                 </div>
               </div>
             </div>
@@ -152,7 +182,7 @@
                 </div>
                 <div class="basket-item-info large-2 column end"><a class="basket-remove remove-large" data-open="removeModal"><i class="fa fa-remove warning"></i><span>Видалити з кошика</span></a>
                   <p>Сума</p>
-                  <div class="detail-price small"><span>650 грн.</span></div>
+                  <div class="detail-price small"><span>1300 грн.</span></div>
                 </div>
               </div>
             </div>
@@ -183,7 +213,7 @@
                 </div>
                 <div class="basket-item-info large-2 column end"><a class="basket-remove remove-large" data-open="removeModal"><i class="fa fa-remove warning"></i><span>Видалити з кошика</span></a>
                   <p>Сума</p>
-                  <div class="detail-price small"><span>650 грн.</span></div>
+                  <div class="detail-price small"><span>1300 грн.</span></div>
                 </div>
               </div>
             </div>
@@ -333,18 +363,20 @@
           </div>
         </div>
       </div>
-      <div class="footer-copyright row">
-        <div class="large-6 column">
-          <p>Все права защищены © 2 x 2, 2015 - 2016</p>
+      <div class="footer-copyright">
+        <div class="row">
+          <div class="large-6 column">
+            <p>Все права защищены © 2 x 2, 2015 - 2016</p>
+          </div>
+          <div class="large-6 column">
+            <p class="right-for-large-only"><a>MassMedia Group</a>- Создание и поддержка сайта</p>
+          </div>
         </div>
-        <div class="large-6 column">
-          <p class="text-right"><a>MassMedia Group</a>- Создание и поддержка сайта</p>
-        </div>
-        <div class="footer-logo column text-center"><a><img src="files/img/logo-big.png"></a></div>
+        <div class="footer-logo text-center"><a><img src="files/img/logo-big.png"></a></div>
       </div>
       <script src="js/jquery.min.js"></script>
-      <script src="js/script.js"></script>
       <script src="js/slick.min.js"></script>
+      <script src="js/script.js"></script>
     </footer>
   </body>
 </html>

@@ -1,0 +1,86 @@
+.account-content.order.account-order(id="order")
+    .order-table.form
+        .order-table-th
+            .row
+                .medium-2.column
+                    h6 №
+                .medium-2.column
+                    h6 Дата
+                .medium-4.column
+                    h6 Товари
+                .medium-2.column
+                    h6 Сума
+                .medium-2.column
+                    h6 Статус
+        .order-table-tr.account-order-item
+            .account-order-link.row
+                .medium-2.column
+                    .order-table-th-title №
+                    i.fa.fa-angle-down
+                    p 01234567
+                .medium-2.column
+                    .order-table-th-title Дата
+                    p 12/12/2016
+                .medium-3.column
+                    .order-table-th-title Товари
+                    p
+                        | 2 товари
+                .medium-2.medium-offset-1.column
+                    .order-table-th-title Сума
+                    p.detail-price.small
+                        span 198 ₴
+                .medium-2.column
+                    .order-table-th-title Статус
+                    p.status ДОСТАВЛЕНО
+            .account-order-list
+                include _order_tr.pug
+                +order-tr(true)
+                +order-tr(false)
+        .order-table-tr.account-order-item
+            .account-order-link.row
+                .medium-2.column
+                    .order-table-th-title №
+                    i.fa.fa-angle-down
+                    p 01234567
+                .medium-2.column
+                    .order-table-th-title Дата
+                    p 12/12/2016
+                .medium-3.column
+                    .order-table-th-title Товари
+                    p
+                        | 2 товари
+                .medium-2.medium-offset-1.column
+                    .order-table-th-title Сума
+                    p.detail-price.small
+                        span 198 ₴
+                .medium-2.column
+                    .order-table-th-title Статус
+                    p.status.focusout В ОБРОБЦІ
+            .account-order-list
+                include _order_tr.pug
+                +order-tr(true)
+                +order-tr(false)
+        .order-table-tr.account-order-item
+            .account-order-link.row
+                .medium-2.column
+                    .order-table-th-title №
+                    i.fa.fa-angle-down
+                    p 01234567
+                .medium-2.column
+                    .order-table-th-title Дата
+                    p 12/12/2016
+                .medium-3.column
+                    .order-table-th-title Товари
+                    p
+                        | 2 товари
+                .medium-2.medium-offset-1.column
+                    .order-table-th-title Сума
+                    p.detail-price.small
+                        span 198 ₴
+                .medium-2.column
+                    .order-table-th-title Статус
+                    p.status.important СКАСОВАНО
+            .account-order-list
+                include _order_tr.pug
+                +order-tr(true)
+                +order-tr(false)

@@ -33,43 +33,97 @@ header.header
                     p
                         | в корзине 12 товаров <br>
                         | на сумму 1 115 грн.
-                    a.button.block
+                    a.button.block(href='#')
                         | оформить заказ
-                    a.button.white.block
+                    a.button.white.block(href='#')
                         span перейти в корзину
-
+    .header-icons
+        a(data-open='accountModal')
+            i.fa.fa-user-circle
+        a(data-open='basketModal')
+            i.fa.fa-shopping-basket
 nav.navigation
-    a.navigation-close
-        i.icon.icon-close
-    h6 МЕНЮ
-    ul
-        li
-            a Школьная форма
-        li
-            a Пиджаки и куртки
-        li
-            a Брюки и шорты
-        li
-            a Свитера
-        li
-            a Рубашки
-        li
-            a Футболки и майки
-        li
-            a Платья и юбки
-        li
-            a Статьи
-        li
-            a Доставка
-        li
-            a Оплата
-        li
-            a Контакти
-    p +38 (044) 279 62 26
-    .navigation-icons
-        a
-            i.fa.fa-facebook
-        a
-            i.fa.fa-instagram
-        a
-            i.fa.fa-vk
+    .navigation-inner
+        a.navigation-close
+            i.icon.icon-close
+        h6 МЕНЮ
+        ul
+            li
+                a(href='#') Школьная форма
+            li
+                a(href='#') Пиджаки и куртки
+            li
+                a(href='#') Брюки и шорты
+            li
+                a(href='#') Свитера
+            li
+                a(href='#') Рубашки
+            li
+                a(href='#') Футболки и майки
+            li
+                a(href='#') Платья и юбки
+            li
+                a(href='#') Статьи
+            li
+                a(href='#') Доставка
+            li
+                a(href='#') Оплата
+            li
+                a(href='#') Контакти
+
+        .navigation-responsive
+            .navigation-icons
+                a(data-open='searchModal')
+                    i.fa.fa-search
+            p
+                | +38 (044) 279-62-26, Киев, <br> ул. Лютеранская, 11 А
+        p.navigation-contacts +38 (044) 279 62 26
+        .navigation-icons
+            a(href='#')
+                i.fa.fa-facebook
+            a(href='#')
+                i.fa.fa-instagram
+            a(href='#')
+                i.fa.fa-vk
+
+
+        #searchModal.reveal.xsmall(data-reveal='',data-options="showDelay:300; hideDelay:300")
+            a.reveal-close(aria-label='Close', data-close)
+                i.fa.fa-close
+            h2.text-center Поиск
+            .form
+                input(type="text", placeholder='Например: Школьная форма' required="required")
+                button.button.block.accented
+                    i.fa.fa-search
+        #accountModal.reveal.xsmall(data-reveal='',data-options="showDelay:300; hideDelay:300")
+            a.reveal-close(aria-label='Close', data-close)
+                i.fa.fa-close
+            h2.text-center Личный кабинет
+            ul.list-menu
+                li
+                    a(href='#')
+                        i.fa.fa-angle-right
+                        | Войти
+                li
+                    a(href='#')
+                        i.fa.fa-angle-right
+                        | Мои данные
+                li
+                    a(href='#')
+                        i.fa.fa-angle-right
+                        | Сменить пароль
+                li
+                    a(href='#')
+                        i.fa.fa-angle-right
+                        | Заказы
+        #basketModal.reveal.xsmall(data-reveal='',data-options="showDelay:300; hideDelay:300")
+            a.reveal-close(aria-label='Close', data-close)
+                i.fa.fa-close
+            h2.text-center Корзина
+            p
+                | в корзине 12 товаров <br>
+                | на сумму 1 115 грн.
+            a.button.block(href='#')
+                | оформить заказ
+            a.button.white.block(href='#')
+                span перейти в корзину

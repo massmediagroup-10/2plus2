@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>a.nuzhin | 2plus2</title>
+    <meta charset="utf-8">
+    <meta name="author" content="a.nuzhin">
+    <meta name="description" content="layout for 2plus2">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <base href="./assets/">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/slick.css" rel="stylesheet" type="text/css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-contacts large-5 column"><a class="menu-toggle"><i class="icon icon-bars"></i></a>
+        <p>+38 (044) 279-62-26, Киев, ул. Лютеранская, 11 А</p>
+      </div>
+      <div class="header-logo large-2 column text-center"><a href="/"><img src="files/img/logo.png" alt=""></a></div>
+      <div class="header-menu large-5 column">
+        <ul>
+          <li>
+            <div class="header-search"><i class="fa fa-search"></i>
+              <input placeholder="Поиск">
+            </div>
+          </li>
+          <li><a class="underline" data-toggle="account"><span>Личный кабинет</span></a>
+            <ul class="dropdown-pane dropdown-menu" id="account" data-dropdown>
+              <li><a href="#">войти</a></li>
+              <li><a href="#">Мои данные</a></li>
+              <li><a href="#">сменить пароль</a></li>
+              <li><a href="#">Заказы</a></li>
+            </ul>
+          </li>
+          <li><a class="basket-label" data-toggle="drop-basket" data-options="align:right"><i class="icon icon-bag"></i><span>12</span></a>
+            <div class="dropdown-pane dropdown-basket" id="drop-basket" data-dropdown>
+              <p>
+                в корзине 12 товаров <br>
+                на сумму 1 115 грн.
+              </p><a class="button block" href="#">оформить заказ</a><a class="button white block" href="#"><span>перейти в корзину</span></a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="header-icons"><a data-open="accountModal"><i class="fa fa-user-circle"></i></a><a data-open="basketModal"><i class="fa fa-shopping-basket"></i></a></div>
+    </header>
+    <nav class="navigation">
+      <div class="navigation-inner"><a class="navigation-close"><i class="icon icon-close"></i></a>
+        <h6>МЕНЮ</h6>
+        <ul>
+          <li><a href="#">Школьная форма</a></li>
+          <li><a href="#">Пиджаки и куртки</a></li>
+          <li><a href="#">Брюки и шорты</a></li>
+          <li><a href="#">Свитера</a></li>
+          <li><a href="#">Рубашки</a></li>
+          <li><a href="#">Футболки и майки</a></li>
+          <li><a href="#">Платья и юбки</a></li>
+          <li><a href="#">Статьи</a></li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Оплата</a></li>
+          <li><a href="#">Контакти</a></li>
+        </ul>
+        <div class="navigation-responsive">
+          <div class="navigation-icons"><a data-open="searchModal"><i class="fa fa-search"></i></a></div>
+          <p>+38 (044) 279-62-26, Киев, <br> ул. Лютеранская, 11 А</p>
+        </div>
+        <p class="navigation-contacts">+38 (044) 279 62 26</p>
+        <div class="navigation-icons"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-instagram"></i></a><a href="#"><i class="fa fa-vk"></i></a></div>
+        <div class="reveal xsmall" id="searchModal" data-reveal="" data-options="showDelay:300; hideDelay:300"><a class="reveal-close" aria-label="Close" data-close><i class="fa fa-close"></i></a>
+          <h2 class="text-center">Поиск</h2>
+          <div class="form">
+            <input type="text" placeholder="Например: Школьная форма" required="required">
+            <button class="button block accented"><i class="fa fa-search"></i></button>
+          </div>
+        </div>
+        <div class="reveal xsmall" id="accountModal" data-reveal="" data-options="showDelay:300; hideDelay:300"><a class="reveal-close" aria-label="Close" data-close><i class="fa fa-close"></i></a>
+          <h2 class="text-center">Личный кабинет</h2>
+          <ul class="list-menu">
+            <li><a href="#"><i class="fa fa-angle-right"></i>Войти</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i>Мои данные</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i>Сменить пароль</a></li>
+            <li><a href="#"><i class="fa fa-angle-right"></i>Заказы</a></li>
+          </ul>
+        </div>
+        <div class="reveal xsmall" id="basketModal" data-reveal="" data-options="showDelay:300; hideDelay:300"><a class="reveal-close" aria-label="Close" data-close><i class="fa fa-close"></i></a>
+          <h2 class="text-center">Корзина</h2>
+          <p>
+            в корзине 12 товаров <br>
+            на сумму 1 115 грн.
+          </p><a class="button block" href="#">оформить заказ</a><a class="button white block" href="#"><span>перейти в корзину</span></a>
+        </div>
+      </div>
+    </nav>
+    <div class="page-heading">
+      <div class="row column">
+        <div class="breadcrumbs">
+          <ul>
+            <li><a>Главная</a></li>
+            <li><span>Личный кабинет</span></li>
+          </ul>
+        </div>
+        <div class="page-title">личный кабинет</div>
+      </div>
+    </div>
+    <main class="content">
+      <div class="row account">
+        <aside class="large-3 column">
+          <div class="simple-menu">
+            <ul>
+              <li><a href="#personal">Мои данные<i class="fa fa-chevron-right"></i></a></li>
+              <li><a href="#recover">Смена пароля<i class="fa fa-chevron-right"></i></a></li>
+              <li class="active"><a href="#order">Заказы<i class="fa fa-chevron-right"></i></a></li>
+            </ul>
+          </div>
+        </aside>
+        <section class="large-9 column">
+          <div class="account-content order account-order" id="order">
+            <div class="order-table form">
+              <div class="order-table-th">
+                <div class="row">
+                  <div class="medium-2 column">
+                    <h6>№</h6>
+                  </div>
+                  <div class="medium-2 column">
+                    <h6>Дата</h6>
+                  </div>
+                  <div class="medium-4 column">
+                    <h6>Товари</h6>
+                  </div>
+                  <div class="medium-2 column">
+                    <h6>Сума</h6>
+                  </div>
+                  <div class="medium-2 column">
+                    <h6>Статус</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="order-table-tr account-order-item">
+                <div class="account-order-link row">
+                  <div class="medium-2 column">
+                    <div class="order-table-th-title">№</div><i class="fa fa-angle-down"></i>
+                    <p>01234567</p>
+                  </div>
+                  <div class="medium-2 column">
+                    <div class="order-table-th-title">Дата</div>
+                    <p>12/12/2016</p>
+                  </div>
+                  <div class="medium-3 column">
+                    <div class="order-table-th-title">Товари</div>
+                    <p>2 товари</p>
+                  </div>
+                  <div class="medium-2 medium-offset-1 column">
+                    <div class="order-table-th-title">Сума</div>
+                    <p class="detail-price small"><span>198 ₴</span></p>
+                  </div>
+                  <div class="medium-2 column">
+                    <div class="order-table-th-title">Статус</div>
+                    <p class="status">ДОСТАВЛЕНО</p>
+                  </div>
+                </div>
+                <div class="account-order-list">
+                                    <div class="order-table-tr">
+                                      <div class="basket-item">
+                                        <div class="row">
+                                          <div class="large-6 column">
+                                            <div class="catalog-item">
+                                              <div class="catalog-item-label usual">распродажа</div>
+                                              <div class="catalog-item-image"><a href="#"><img src="http://placehold.it/116x116"></a></div>
+                                            </div>
+                                            <div class="basket-item-description">
+                                              <h6><a>Кардиган трикотажный</a></h6>
+                                              <p class="subtitle">Синий на пуговицах</p>
+                                              <p>Код товара: 17398643</p>
+                                              <div class="detail-price small"><span>650 грн.</span></div>
+                                            </div>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column">
+                                            <p>Размер</p>
+                                            <h6>158</h6>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column">
+                                            <p>Количество</p>
+                                            <h6>2</h6>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column end">
+                                            <p>Сумма</p>
+                                            <div class="detail-price small"><span>112.00 грн.</span></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="order-table-tr">
+                                      <div class="basket-item">
+                                        <div class="row">
+                                          <div class="large-6 column">
+                                            <div class="catalog-item">
+                                              <div class="catalog-item-image"><a href="#"><img src="http://placehold.it/116x116"></a></div>
+                                            </div>
+                                            <div class="basket-item-description">
+                                              <h6><a>Кардиган трикотажный</a></h6>
+                                              <p class="subtitle">Синий на пуговицах</p>
+                                              <p>Код товара: 17398643</p>
+                                              <div class="detail-price small"><span>650 грн.</span></div>
+                                            </div>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column">
+                                            <p>Размер</p>
+                                            <h6>158</h6>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column">
+                                            <p>Количество</p>
+                                            <h6>2</h6>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column end">
+                                            <p>Сумма</p>
+                                            <div class="detail-price small"><span>112.00 грн.</span></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                </div>
+              </div>
+              <div class="order-table-tr account-order-item">
+                <div class="account-order-link row">
+                  <div class="medium-2 column">
+                    <div class="order-table-th-title">№</div><i class="fa fa-angle-down"></i>
+                    <p>01234567</p>
+                  </div>
+                  <div class="medium-2 column">
+                    <div class="order-table-th-title">Дата</div>
+                    <p>12/12/2016</p>
+                  </div>
+                  <div class="medium-3 column">
+                    <div class="order-table-th-title">Товари</div>
+                    <p>2 товари</p>
+                  </div>
+                  <div class="medium-2 medium-offset-1 column">
+                    <div class="order-table-th-title">Сума</div>
+                    <p class="detail-price small"><span>198 ₴</span></p>
+                  </div>
+                  <div class="medium-2 column">
+                    <div class="order-table-th-title">Статус</div>
+                    <p class="status focusout">В ОБРОБЦІ</p>
+                  </div>
+                </div>
+                <div class="account-order-list">
+                                    <div class="order-table-tr">
+                                      <div class="basket-item">
+                                        <div class="row">
+                                          <div class="large-6 column">
+                                            <div class="catalog-item">
+                                              <div class="catalog-item-label usual">распродажа</div>
+                                              <div class="catalog-item-image"><a href="#"><img src="http://placehold.it/116x116"></a></div>
+                                            </div>
+                                            <div class="basket-item-description">
+                                              <h6><a>Кардиган трикотажный</a></h6>
+                                              <p class="subtitle">Синий на пуговицах</p>
+                                              <p>Код товара: 17398643</p>
+                                              <div class="detail-price small"><span>650 грн.</span></div>
+                                            </div>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column">
+                                            <p>Размер</p>
+                                            <h6>158</h6>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column">
+                                            <p>Количество</p>
+                                            <h6>2</h6>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column end">
+                                            <p>Сумма</p>
+                                            <div class="detail-price small"><span>112.00 грн.</span></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="order-table-tr">
+                                      <div class="basket-item">
+                                        <div class="row">
+                                          <div class="large-6 column">
+                                            <div class="catalog-item">
+                                              <div class="catalog-item-image"><a href="#"><img src="http://placehold.it/116x116"></a></div>
+                                            </div>
+                                            <div class="basket-item-description">
+                                              <h6><a>Кардиган трикотажный</a></h6>
+                                              <p class="subtitle">Синий на пуговицах</p>
+                                              <p>Код товара: 17398643</p>
+                                              <div class="detail-price small"><span>650 грн.</span></div>
+                                            </div>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column">
+                                            <p>Размер</p>
+                                            <h6>158</h6>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column">
+                                            <p>Количество</p>
+                                            <h6>2</h6>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column end">
+                                            <p>Сумма</p>
+                                            <div class="detail-price small"><span>112.00 грн.</span></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                </div>
+              </div>
+              <div class="order-table-tr account-order-item">
+                <div class="account-order-link row">
+                  <div class="medium-2 column">
+                    <div class="order-table-th-title">№</div><i class="fa fa-angle-down"></i>
+                    <p>01234567</p>
+                  </div>
+                  <div class="medium-2 column">
+                    <div class="order-table-th-title">Дата</div>
+                    <p>12/12/2016</p>
+                  </div>
+                  <div class="medium-3 column">
+                    <div class="order-table-th-title">Товари</div>
+                    <p>2 товари</p>
+                  </div>
+                  <div class="medium-2 medium-offset-1 column">
+                    <div class="order-table-th-title">Сума</div>
+                    <p class="detail-price small"><span>198 ₴</span></p>
+                  </div>
+                  <div class="medium-2 column">
+                    <div class="order-table-th-title">Статус</div>
+                    <p class="status important">СКАСОВАНО</p>
+                  </div>
+                </div>
+                <div class="account-order-list">
+                                    <div class="order-table-tr">
+                                      <div class="basket-item">
+                                        <div class="row">
+                                          <div class="large-6 column">
+                                            <div class="catalog-item">
+                                              <div class="catalog-item-label usual">распродажа</div>
+                                              <div class="catalog-item-image"><a href="#"><img src="http://placehold.it/116x116"></a></div>
+                                            </div>
+                                            <div class="basket-item-description">
+                                              <h6><a>Кардиган трикотажный</a></h6>
+                                              <p class="subtitle">Синий на пуговицах</p>
+                                              <p>Код товара: 17398643</p>
+                                              <div class="detail-price small"><span>650 грн.</span></div>
+                                            </div>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column">
+                                            <p>Размер</p>
+                                            <h6>158</h6>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column">
+                                            <p>Количество</p>
+                                            <h6>2</h6>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column end">
+                                            <p>Сумма</p>
+                                            <div class="detail-price small"><span>112.00 грн.</span></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="order-table-tr">
+                                      <div class="basket-item">
+                                        <div class="row">
+                                          <div class="large-6 column">
+                                            <div class="catalog-item">
+                                              <div class="catalog-item-image"><a href="#"><img src="http://placehold.it/116x116"></a></div>
+                                            </div>
+                                            <div class="basket-item-description">
+                                              <h6><a>Кардиган трикотажный</a></h6>
+                                              <p class="subtitle">Синий на пуговицах</p>
+                                              <p>Код товара: 17398643</p>
+                                              <div class="detail-price small"><span>650 грн.</span></div>
+                                            </div>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column">
+                                            <p>Размер</p>
+                                            <h6>158</h6>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column">
+                                            <p>Количество</p>
+                                            <h6>2</h6>
+                                          </div>
+                                          <div class="basket-item-info large-2 medium-4 small-12 column end">
+                                            <p>Сумма</p>
+                                            <div class="detail-price small"><span>112.00 грн.</span></div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="account-content personal" id="personal">
+            <form class="form">
+              <div class="form-area">
+                <div class="row">
+                  <div class="large-4 column">
+                    <label>Имя<em>*</em>
+                      <input type="text" placeholder="Ваше ім'я" required="required">
+                    </label>
+                  </div>
+                  <div class="large-4 column end">
+                    <label>Фамилия<em>*</em>
+                      <input type="text" placeholder="Ваше прізвище" required="required">
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-4 column">
+                    <label>Номер мобильного<em>*</em>
+                      <input type="tel" placeholder="Ваш номер мобільного" required="required">
+                    </label>
+                  </div>
+                  <div class="large-4 column">
+                    <label>Email<em>*</em>
+                      <input type="tel" placeholder="Ваш Email" required="required">
+                    </label>
+                  </div>
+                  <div class="large-4 column">
+                    <label>Ваш город
+                      <select>
+                        <option>Місто</option>
+                      </select>
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="account-content-footer">
+                <input class="button wide" type="submit" value="сохранить">
+              </div>
+            </form>
+          </div>
+          <div class="account-content recover" id="recover">
+            <form class="form">
+              <div class="form-area">
+                <div class="row">
+                  <div class="large-4 column">
+                    <label>Старый пароль<em>*</em>
+                      <input type="text" placeholder="Введіть старий пароль" required="required">
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-4 column">
+                    <label>Новый пароль<em>*</em>
+                      <input type="text" placeholder="Введіть новий пароль" required="required">
+                    </label>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="large-4 column">
+                    <label>Повторите новый пароль<em>*</em>
+                      <input type="text" placeholder="Введіть новий пароль" required="required">
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="account-content-footer">
+                <input class="button wide" type="submit" value="сохранить">
+              </div>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+    <div class="footer_placeholder"></div>
+    <footer class="footer">
+      <div class="footer-main">
+        <div class="row">
+          <div class="large-6 column">
+            <div class="row">
+              <div class="footer-column medium-4 column">
+                <h6>Каталог</h6>
+                <ul>
+                  <li><a>Школьная форма</a></li>
+                  <li><a>Пиджаки и куртки</a></li>
+                  <li><a>Брюки и шорты</a></li>
+                  <li><a>Свитера</a></li>
+                  <li><a>Рубашки</a></li>
+                  <li><a>Футболки и майки</a></li>
+                  <li><a>Платья и юбки</a></li>
+                </ul>
+              </div>
+              <div class="footer-column medium-4 column">
+                <h6>Информация</h6>
+                <ul>
+                  <li><a>Статьи</a></li>
+                  <li><a>Контакты</a></li>
+                  <li><a>О нас</a></li>
+                </ul>
+              </div>
+              <div class="footer-column medium-4 column">
+                <h6>Контакты</h6>
+                <p>
+                  +38 (044) 279-62-26
+                  info@2x2.tm
+                  Киев, ул. Лютеранская, 11А
+                </p>
+                <div class="footer-icons"><a><i class="fa fa-facebook"></i></a><a><i class="fa fa-instagram"></i></a><a><i class="fa fa-vk"></i></a></div>
+              </div>
+            </div>
+            <div class="footer-form row column">
+              <h6>ЗАКАЗАТЬ ОБРАТНЫЙ ЗВОНОК</h6>
+              <div class="footer-field form">
+                <input type="text" placeholder="Введите Ваш номер ">
+                <input class="button" type="submit" value="Заказать">
+              </div>
+            </div>
+          </div>
+          <div class="large-6 column">
+            <div class="footer-socials"><img src="files/img/social_temp.png"></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="row">
+          <div class="large-6 column">
+            <p>Все права защищены © 2 x 2, 2015 - 2016</p>
+          </div>
+          <div class="large-6 column">
+            <p class="right-for-large-only"><a>MassMedia Group</a>- Создание и поддержка сайта</p>
+          </div>
+        </div>
+        <div class="footer-logo text-center"><a><img src="files/img/logo-big.png"></a></div>
+      </div>
+      <script src="js/jquery.min.js"></script>
+      <script src="js/slick.min.js"></script>
+      <script src="js/script.js"></script>
+    </footer>
+  </body>
+</html>

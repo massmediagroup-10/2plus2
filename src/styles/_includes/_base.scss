@@ -197,6 +197,25 @@ iframe {
     }
 }
 
+.list-menu {
+    padding: 0;
+    li {
+        a {
+            line-height: 45px;
+            padding: 0 1rem;
+            display: block;
+            font-size: 14px;
+            &:hover {
+                background: $active-color;
+                color: #fff;
+            }
+            i {
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
 @media #{$large-up} {
     .right-for-large-only {
         float: right !important;

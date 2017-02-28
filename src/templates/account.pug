@@ -1,0 +1,37 @@
+doctype html
+html
+    include _includes/_head.pug
+    body
+        include _includes/_header.pug
+        .page-heading
+            .row.column
+                .breadcrumbs
+                    ul
+                        li
+                            a Главная
+                        li
+                            span Личный кабинет
+                .page-title личный кабинет
+        main.content
+            .row.account
+                aside.large-3.column
+                    .simple-menu
+                        ul
+                            li
+                                a(href="#personal")
+                                    | Мои данные
+                                    i.fa.fa-chevron-right
+                            li
+                                a(href="#recover")
+                                    | Смена пароля
+                                    i.fa.fa-chevron-right
+                            li.active
+                                a(href="#order")
+                                    | Заказы
+                                    i.fa.fa-chevron-right
+                section.large-9.column
+                    include _includes/_order.pug
+                    include _includes/_personal.pug
+                    include _includes/_password.pug
+
+        include _includes/_footer.pug

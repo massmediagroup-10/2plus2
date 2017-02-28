@@ -143,5 +143,10 @@ select {
         &.error {
             display: none !important;
         }
+        em {
+            color: #f24841;
+            font-style: normal;
+            margin: 0 3px;
+        }
     }
 }

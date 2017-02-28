@@ -1,0 +1,18 @@
+html
+    include _includes/_head.pug
+    body.starterkit
+        include _includes/_header.pug
+        main.content
+            .notfound
+                .notfound-img
+                    .glitch-img(style='background-image:url(files/img/notfound.jpg)')
+                .notfound-text(data-center='top: 220px;',
+                data-top-bottom='top: 150px;',
+                data-bottom-top='top: 220px;')
+                    h3
+                        em Ой!
+                        | не туда зашли?
+                    h6 Возможно страница была удалена, либо изменился её адрес.
+                    a.button(href='/') На главную
+
+include _includes/_footer.pug

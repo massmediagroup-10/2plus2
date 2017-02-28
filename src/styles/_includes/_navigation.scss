@@ -1,14 +1,19 @@
 .navigation {
-    background-color: rgb(0, 0, 0);
-    width: 341px;
+    background-color: rgba(0,0,0,0.7);
     position: fixed;
     top: 0;
     bottom: 0;
-    padding-left: rem-calc(60px);
+    padding-left: $gutter-medium-full;
     padding-top: rem-calc(40px);
     transform: translateX(-100%);
     transition: 300ms transform ease;
     z-index: 12;
+    width: 100%;
+    @media #{$large-up} {
+        background-color: rgba(0, 0, 0, 0.9);
+        padding-left: rem-calc(60px);
+        width: 341px;
+    }
     &.active {
         transform: translateX(0);
 
@@ -26,8 +31,6 @@
     }
     ul {
         margin-bottom: 22px;
-        max-height: 80%;
-        overflow: auto;
         li {
             margin-bottom: 18px;
             a {
@@ -41,17 +44,24 @@
             }
         }
     }
-    p {
+    &-inner {
+        overflow: auto;
+        max-height: 100vh;
+    }
+    &-contacts {
         color: $white;
         font-size: rem-calc(14px);
         @extend %inline-middle;
         margin-right: 22px;
+        @extend %inline-middle;
+        @media #{$max-large} {
+            display: none;
+        }
     }
     &-close {
         position: absolute;
-        left: 100%;
         top: 34px;
-        margin-left: 20px;
+        right: $gutter-medium-full;
         display: none;
         animation-name: rotation;
         animation-duration: 0.6s;
@@ -59,10 +69,18 @@
             animation-name: rotation-rev;
             animation-duration: 0.3s;
         }
+        @media #{$large-up} {
+            left: 100%;
+            right: auto;
+            margin-left: 20px;
+        }
     }
     &-icons {
         font-size: 26px;
-        @extend %inline-middle;
+        @media #{$large-up} {
+            display: inline-block;
+            vertical-align: middle;
+        }
         i {
             color: $white;
         }
@@ -71,6 +89,22 @@
             &:hover {
                 opacity: 0.8;
             }
+        }
+    }
+    &-responsive {
+        display: none;
+        &, a, i, p {
+            color: $white;
+        }
+        .navigation-icons {
+            margin-bottom: 20px;
+        }
+        p {
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        @media #{$max-large} {
+            display: block;
         }
     }
 }

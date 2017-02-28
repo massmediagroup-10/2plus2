@@ -1,0 +1,49 @@
+.simple-menu {
+    background: $white;
+    margin-bottom: rem-calc(30px);
+    h3 {
+        height: 55px;
+        @extend .shopping-card-header;
+        @include display-flex(center, center);
+        span {
+            line-height: 1.4rem;
+            display: inline-block;
+        }
+    }
+    ul {
+        li {
+            a {
+                font-size: 16px;
+                color: $input-placeholder-color;
+                display: block;
+                line-height: rem-calc(55px);
+                padding-left: 30px;
+                i {
+                    line-height: rem-calc(55px);
+                    float: right;
+                    opacity: 0;
+                    transition: 300ms all ease;
+                    width: 10px;
+                    transform: translate(5px);
+                }
+            }
+            &.active a,
+            & a:hover {
+                color: $white;
+                background: $active-color;
+                i {
+                    width: 20px;
+                    opacity: 1;
+                    font-size: 16px;
+                    color: $white;
+                    transform: translate(-10px);
+                }
+            }
+            &:last-child {
+                a {
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}

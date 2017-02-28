@@ -1,7 +1,7 @@
 'use strict';
 
 function isMobile() {
-    return ($(window).width() < 1024) ? true : false;
+    return ($(window).width() <= 1024) ? true : false;
 }
 
 function footerplaceholder() {
@@ -123,6 +123,7 @@ function initSliders() {
         focusOnSelect: true,
         arrows: false,
         vertical: true,
+        adaptiveHeight: true,
         responsive: [{
             breakpoint: 1024,
             settings: {
@@ -258,6 +259,91 @@ function previewScroll() {
     });
 }
 
+function accountOrder() {
+    $('.account-order-list').slideUp(0);
+
+    $('.account-order-link').on('click', function(e) {
+        e.preventDefault();
+        var parent = $(this).closest('.account-order-item');
+        parent.toggleClass('active')
+        parent.find('.account-order-list').stop().slideToggle();
+    });
+}
+
+function simpleMenu() {
+    $('.simple-menu li').each(function(e) {
+        if ($(this).hasClass('active')) {
+            var target = $(this).find('a').attr('href');
+            $('.account-content').hide();
+            $(target).show();
+        }
+    });
+
+    $(document).on('click', '.simple-menu a', function(e) {
+        e.preventDefault();
+        var target = $(this).attr('href');
+        $('.simple-menu li').removeClass('active');
+        $(this).closest('li').addClass('active');
+        $('.account-content').hide();
+        $(target).show();
+    });
+}
+
+function mgGlitcher(glitch, timeToStop, timeToRestart) {
+    var self = this;
+    this.delayTime = 1000;
+    this.glitch = glitch;
+    this.stopTime = timeToStop;
+    this.restartTime = timeToRestart;
+
+    this.initGlitcher = function() {
+        setTimeout(function() {
+            $(glitch).mgGlitch({
+                destroy: false,
+                glitch: true,
+                scale: true,
+                blend: true,
+                blendModeType: 'hue',
+                glitch1TimeMin: 200,
+                glitch1TimeMax: 400,
+                glitch2TimeMin: 10,
+                glitch2TimeMax: 100
+            });
+            self.stopGlitcher();
+        }, self.delayTime);
+    };
+
+    this.stopGlitcher = function() {
+        setTimeout(function() {
+            $(glitch).mgGlitch({
+                destroy: true
+            });
+            self.restartGlitcher();
+        }, self.stopTime);
+    };
+
+    this.restartGlitcher = function() {
+        setTimeout(function() {
+            self.initGlitcher();
+        }, self.restartTime)
+    }
+}
+
+function filterToggle() {
+    var filter = $('.filter');
+    $(document).on('click', '.filter-toggle', function(e) {
+        e.preventDefault();
+        filter.toggleClass('active');
+    });
+
+    if ($('#filter').length) {
+        var hammertime = new Hammer(document.getElementById('filter'));
+        hammertime.on('swipeleft', function() {
+            filter.removeClass('active');
+        });
+    }
+}
+
 $(document).ready(function() {
     foundation();
     footerplaceholder();
@@ -271,6 +357,11 @@ $(document).ready(function() {
     detailColor();
     detailSize();
     checkoutItem();
+    accountOrder();
+    simpleMenu();
+    filterToggle();
+    var glitch = new mgGlitcher('.glitch-img', 2000, 3000);
+    glitch.initGlitcher();
 
     $('form').each(function() {
         $(this).validate();

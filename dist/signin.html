@@ -90,34 +90,116 @@
         </div>
       </div>
     </nav>
-    <main class="content index">
-      <div class="preview">
-        <div class="preview-top full large-collapse">
-          <div class="preview-top-side large-6 column" style="background-image:url(files/img/collection-1.png);"></div>
-          <div class="preview-top-side large-6 column" style="background-image:url(files/img/collection-2.png);"></div>
-          <div class="preview-scroll"><a href="#"><i class="icon icon-scroll"></i></a></div>
+    <div class="page-heading">
+      <div class="row column">
+        <div class="breadcrumbs">
+          <ul>
+            <li><a>Главная</a></li>
+            <li><span>Авторизация</span></li>
+          </ul>
         </div>
-        <div class="preview-main" style="background-image: url(files/img/preview-1.png);" data-center="background-position: 50% 0px;" data-bottom-top="background-position: 50% 80px;" data-top-bottom="background-position: 50% -80px;"></div>
+        <div class="page-title">Авторизация</div>
       </div>
-      <div class="product-list row">
-                <div class="product-item medium-4 column">
-                  <div class="product-item-inner">
-                    <div class="product-item-img"><a><img src="files/img/product-3.png"></a></div>
-                    <div class="product-item-body"><a class="button hollow large">Девочкам +</a></div>
+    </div>
+    <main class="content">
+      <div class="checkout row column">
+        <div class="checkout-item form expanded active">
+          <div class="row column">
+            <form name="existing_customer">
+              <div class="checkout-title"><span>войти</span></div>
+              <div class="checkout-body large-9">
+                <div class="row">
+                  <div class="large-4 column">
+                    <label>E-mail
+                      <input type="email" placeholder="Введите Ваш email" required="required">
+                    </label>
+                  </div>
+                  <div class="large-4 column">
+                    <label>Пароль
+                      <input type="password" placeholder="Введите пароль" required="required">
+                    </label>
+                  </div>
+                  <div class="large-4 column plain">
+                    <input class="button block" type="submit" value="Войти"><a class="right-for-large-only" data-open="forgotpass">Забыли пароль?</a>
                   </div>
                 </div>
-                <div class="product-item medium-4 column">
-                  <div class="product-item-inner">
-                    <div class="product-item-img"><a><img src="files/img/product-3.png"></a></div>
-                    <div class="product-item-body"><a class="button hollow large">Мальчикам +</a></div>
+                <div class="row">
+                  <div class="large-8 column end">
+                    <div class="form-label">Или войти через</div>
                   </div>
                 </div>
-                <div class="product-item medium-4 column">
-                  <div class="product-item-inner">
-                    <div class="product-item-img"><a><img src="files/img/product-3.png"></a></div>
-                    <div class="product-item-body"><a class="button hollow large">Взрослым +</a></div>
-                  </div>
+                <div class="row">
+                  <div class="large-4 column"><a class="button block thin facebook"><i class="fa fa-facebook"></i><span>Facebook</span></a></div>
+                  <div class="large-4 column end"><a class="button block thin vk"><i class="fa fa-vk"></i><span>Vkontakte</span></a></div>
                 </div>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="checkout-item form expanded active">
+          <form name="new_customer">
+            <div class="checkout-title"><span>регистрация</span></div>
+            <div class="checkout-body">
+              <div class="row">
+                <div class="large-3 column">
+                  <label>Ім’я<em>*</em>
+                    <input type="text" placeholder="Введите Ваше имя" required="required">
+                  </label>
+                </div>
+                <div class="large-3 column end">
+                  <label>Фамилия<em>*</em>
+                    <input type="text" placeholder="Введите Вашу фамилию" required="required">
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-3 column">
+                  <label>Номер мобильного<em>*</em>
+                    <input type="tel" placeholder="Введите Ваш номер">
+                  </label>
+                </div>
+                <div class="large-3 column">
+                  <label>E-mail<em>*</em>
+                    <input type="email" placeholder="Введите email" required="required">
+                  </label>
+                </div>
+                <div class="large-3 column end">
+                  <label>Ваш город
+                    <select>
+                      <option>Выберите город</option>
+                    </select>
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <div class="large-3 column">
+                  <label>Пароль<em>*</em>
+                    <input type="password" placeholder="Введите пароль" required="required">
+                  </label>
+                </div>
+                <div class="large-3 column end">
+                  <label>Повторите пароль<em>*</em>
+                    <input type="password" placeholder="Повторите пароль" required="required">
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="checkout-footer">
+              <input class="button accented wide" type="submit" value="зарегистрироваться">
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="reveal xsmall" id="forgotpass" data-reveal="" data-options="showDelay:300; hideDelay:300"><a class="reveal-close" aria-label="Close" data-close><i class="fa fa-close"></i></a>
+        <h2 class="text-center">Забыли пароль?</h2>
+        <div class="form">
+          <input type="email" placeholder="Введите Ваш email" required="required">
+          <p class="form-hint">
+            Введите Ваш email, что бы мы могли
+            восстановить Ваш пароль
+          </p>
+          <input class="button block accented" type="submit" value="Отправить">
+        </div>
       </div>
     </main>
     <div class="footer_placeholder"></div>

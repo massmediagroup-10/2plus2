@@ -16,17 +16,44 @@
     }
     &-contacts {
         @include display-flex(flex-start, center);
+        @media #{$max-large} {
+            width: auto;
+        }
         p {
             @extend %inline-middle;
             letter-spacing: 0.02em;
+            @media #{$max-large} {
+                display: none;
+            }
         }
         .menu-toggle {
             @extend %inline-middle;
             margin-right: 24px;
         }
     }
+    &-icons {
+        font-size: 26px;
+        min-width: 130px;
+        text-align: right;
+        @include display-flex(flex-end, center);
+        display: none;
+        a {
+            display: inline-block;
+            @extend %inline-middle;
+            margin: 0 10px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+        @media #{$max-large} {
+            display: block;
+        }
+    }
     &-menu {
         @include display-flex(flex-end, center);
+        @media #{$max-large} {
+            display: none;
+        }
         & > ul {
             & > li {
                 @extend %inline-middle;
@@ -112,6 +139,11 @@
     }
     &-logo {
         @include display-flex(center, center);
+
+        @media #{$max-large} {
+            width: 100%;
+            justify-content: flex-start;
+        }
     }
     &-search {
         input {

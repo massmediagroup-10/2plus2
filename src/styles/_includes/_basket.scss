@@ -63,6 +63,9 @@
                 color: $lighter-gray;
                 margin-bottom: 14px;
             }
+            h6 {
+                font-weight: normal;
+            }
             input,
             select {
                 max-width: 90px;
@@ -70,7 +73,7 @@
         }
         .catalog-item-label {
             top: calc(50% - 17px);
-            left: -20px;
+            left: -$gutter-medium-full;
         }
     }
     &-remove {

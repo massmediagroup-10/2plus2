@@ -1,4 +1,5 @@
 .footer {
+    background: url(../files/img/cell.png) #f0f0f0;
     &-column {
         margin-bottom: 27px;
         p {
@@ -43,6 +44,10 @@
             float: left;
             margin-right: 10px;
             margin-bottom: 0;
+            @media #{$small-only} {
+                width: 100%;
+                margin-bottom: 10px;
+            }
         }
     }
     &-copyright {
@@ -53,8 +58,15 @@
                 text-decoration: none;
             }
         }
+        p {
+            margin-bottom: 1em;
+            text-align: center;
+            @media #{$large-up} {
+                text-align: left;
+            }
+        }
     }
     &-logo {
-        margin: rem-calc(50px);
+        margin: rem-calc(40px);
     }
 }

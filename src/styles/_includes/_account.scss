@@ -1,0 +1,85 @@
+.account {
+    margin-bottom: rem-calc(50);
+    &-content {
+        background: $white;
+        padding: $gutter-medium-full;
+        &-footer {
+            margin-top: 20px;
+        }
+    }
+    &-order {
+        .basket-item {
+            padding: 0;
+            background: none;
+        }
+        &-item {
+            position: relative;
+            &.active {
+                border-bottom: 0;
+                i {
+                    transform: rotate(180deg);
+                }
+                @media #{$small-only} {
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        bottom: 0;
+                        border-left: 2px solid $success-color;
+                        left: -7px;
+                    }
+                }
+            }
+            i {
+                float: left;
+                color: #666666;
+                margin-right: 10px;
+                line-height: 20px;
+                display: none;
+            }
+
+            @media #{$medium-up} {
+                i {
+                    display: inline-block;
+                }
+            }
+        }
+        &-link {
+            cursor: pointer;
+            margin-bottom: 15px;
+            padding: 0 $gutter-medium-full;
+            @media #{$small-only} {
+                p {
+                    line-height: 2;
+                }
+            }
+        }
+        &-list {
+            margin-top: 17px;
+            background: #f7f7f7;
+            padding: $gutter-medium-full;
+
+            .order-table-tr {
+                border-bottom: 0;
+            }
+        }
+        .catalog-item {
+            display: inline-block;
+            margin-bottom: 15px;
+            @media #{$medium-up} {
+                float: left;
+            }
+            &-image {
+                width: 115px;
+                height: 115px;
+            }
+        }
+        .detail-price {
+            &, span {
+                margin-bottom: 0;
+            }
+        }
+        .status {
+        }
+    }
+}

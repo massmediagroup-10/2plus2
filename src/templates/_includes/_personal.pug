@@ -1,0 +1,34 @@
+.account-content.personal(id="personal")
+    form.form
+        .form-area
+            .row
+                .large-4.column
+                    label
+                        | Имя
+                        em *
+                        input(type="text", placeholder="Ваше ім'я", required="required")
+                .large-4.column.end
+                    label
+                        | Фамилия
+                        em *
+                        input(type="text", placeholder="Ваше прізвище", required="required")
+            .row
+                .large-4.column
+                    label
+                        | Номер мобильного
+                        em *
+                        input(type="tel", placeholder="Ваш номер мобільного", required="required")
+                .large-4.column
+                    label
+                        | Email
+                        em *
+                        input(type="tel", placeholder="Ваш Email", required="required")
+                .large-4.column
+                    label
+                        | Ваш город
+                        select
+                            option Місто
+
+
+        .account-content-footer
+            input.button.wide(type="submit", value="сохранить")
