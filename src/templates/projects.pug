@@ -1,0 +1,35 @@
+doctype html
+html
+    include _includes/_head.pug
+    body
+        include _includes/_header.pug
+        .page-heading
+            .row.column
+                .breadcrumbs
+                    ul
+                        li
+                            a Главная
+                        li
+                            span Личный кабинет
+                .page-title Личный кабинет
+        main.content
+            .projects
+                h2 Школа №1 м. Київ
+                h4 (03.05.2017)
+                .projects-list.grid
+                    .grid-sizer
+                    img.grid-item(src='http://placehold.it/302x336/fddbd9/20242f')
+                    img.grid-item(src='http://placehold.it/302x310/a18671/ffffff')
+                    img.grid-item(src='http://placehold.it/302x376/10bddf/20242f')
+                    img.grid-item(src='http://placehold.it/302x376/e0e6f2/20242f')
+                    img.grid-item(src='http://placehold.it/302x447/87a172/20242f')
+                    img.grid-item(src='http://placehold.it/302x475/aaf97d/20242f')
+                    img.grid-item.grid-item-width2(src='http://placehold.it/604x431/aa6f49/17140b')
+                    img.grid-item.grid-item-width2(src='http://placehold.it/604x368/443b40/f0eaec')
+                    img.grid-item(src='http://placehold.it/302x447/565656/691a20')
+                    img.grid-item(src='http://placehold.it/302x447/d80108/f1f2f3')
+                h3.projects-load
+                    a
+                        span Показать еще
+                        i.fa.fa-angle-down
+        include _includes/_footer.pug

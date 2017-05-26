@@ -148,7 +148,8 @@ gulp.task('scripts', function() {
         'node_modules/foundation-sites/js/foundation.reveal.js',
         'node_modules/foundation-sites/js/foundation.dropdown.js',
         'node_modules/skrollr/src/skrollr.js',
-        'node_modules/hammerjs/hammer.min.js'
+        'node_modules/hammerjs/hammer.min.js',
+        'node_modules/masonry-layout/dist/masonry.pkgd.min.js'
     ])
         .pipe(plumber({
             errorHandler: notify.onError({

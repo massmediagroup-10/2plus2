@@ -1,0 +1,65 @@
+.projects {
+    margin-bottom: 3.75rem;
+    &-list {
+        margin-bottom: 3rem;
+        margin: 0 auto 34px auto;
+        @media #{$small-up} {
+            width: 302px;
+        }
+        @media #{$medium-up} {
+            width: 600px;
+        }
+        @media #{$large-up} {
+            width: 900px;
+        }
+        @media screen and (min-width: 80em) {
+            width: 1192px;
+        }
+    }
+    &-load {
+        a {
+            display: inline-block;
+            span {
+                display: inline-block;
+                width: 100%;
+            }
+            i {
+                font-size: 30px;
+                transform: translateY(-2px);
+                transition: 300ms all ease-out;
+            }
+            &:hover {
+                i {
+                    transform: translateY(1px);
+                }
+            }
+        }
+    }
+    h2 {
+        text-align: center;
+        text-transform: none;
+    }
+    h3 {
+        text-align: center;
+        font-weight: 300;
+        text-transform: none;
+    }
+    h4 {
+        text-align: center;
+        color: #777777;
+        font-weight: normal;
+        margin-bottom: 3.5rem
+    }
+}
+
+/* fluid 5 columns */
+.grid-sizer,
+.grid-item {
+    width: 298px;
+    padding: 6px;
+}
+
+/* 2 columns */
+.grid-item-width2 {
+    width: 596px;
+}
